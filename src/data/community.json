@@ -1,0 +1,68 @@
+{
+  "announcements": [
+    {
+      "id": "ann-1",
+      "date": "2026-10-15",
+      "badge": "Demonstration Notice",
+      "badgeHi": "प्रदर्शनात्मक सूचना",
+      "titleEn": "Digital Village Archive & Heritage Portal Launched",
+      "titleHi": "डिजिटल ग्राम अभिलेखागार एवं धरोहर पोर्टल का शुभारंभ",
+      "contentEn": "The official online archive for Tandiyun village is now live. We invite all families, elders, and youth connected to the village to contribute photographs, oral histories, and family tree records.",
+      "contentHi": "तंडियूं गांव के आधिकारिक डिजिटल पोर्टल की शुरुआत हो चुकी है। गांव से जुड़े सभी प्रवासियों एवं स्थानीय बंधुओं से अनुरोध है कि पुरानी तस्वीरें और संस्मरण साझा करें।"
+    },
+    {
+      "id": "ann-2",
+      "date": "2026-11-01",
+      "badge": "Community Project",
+      "badgeHi": "सामुदायिक पहल",
+      "titleEn": "Pathway Maintenance from Bidaliya Niwaas to Tandiyun Village",
+      "titleHi": "बिडालिया निवास से तंडियूं गांव तक पैदल मार्ग सुदृढ़ीकरण",
+      "contentEn": "Seasonal clearing of the traditional stone-paved trail leading uphill from the main road at Bidaliya Niwaas to the village settlement scheduled ahead of the winter season.",
+      "contentHi": "मुख्य सड़क बिडालिया निवास से गांव तक जाने वाले पारंपरिक पैदल मार्ग की मौसमी मरम्मत एवं सफाई का साझा प्रयास प्रस्तावित है।"
+    }
+  ],
+  "upcomingEvents": [
+    {
+      "id": "ev-1",
+      "titleEn": "Annual Sidh Baba Gram Pooja & Community Feast",
+      "titleHi": "वार्षिक सिद्ध बाबा ग्राम पूजा एवं सामूहिक भंडारा",
+      "dateEn": "Winter 2026 / 2027 (Date to be confirmed)",
+      "dateHi": "शीतकालीन 2026 / 2027 (तिथि स्थानीय सहमति से निर्धारित)",
+      "locationEn": "Tandiyun Village Shrine",
+      "locationHi": "तंडियूं ग्राम धाम",
+      "type": "Spiritual Gathering"
+    },
+    {
+      "id": "ev-2",
+      "titleEn": "Phooldei Celebration & Village Youth Meet",
+      "titleHi": "फूलदेई उत्सव एवं युवा संवाद मिलन",
+      "dateEn": "Chaitra Sankranti (Mid-March 2027)",
+      "dateHi": "चैत्र संक्रांति (मध्य मार्च 2027)",
+      "locationEn": "Tandiyun Village Chowk",
+      "locationHi": "तंडियूं ग्राम चौक",
+      "type": "Cultural Festival"
+    }
+  ],
+  "stories": [
+    {
+      "id": "story-1",
+      "author": "P. S. Rawat",
+      "relation": "Elders & Heritage",
+      "titleEn": "Morning Mist on the Bidaliya Ridge",
+      "titleHi": "बिडालिया की ढलान पर सुबह की धुंध",
+      "textEn": "Growing up in Tandiyun, nothing matched the quiet moment at dawn when the fog lifted from the valley below Bidaliya Niwaas, revealing the golden glow on the village rooftops.",
+      "textHi": "तंडियूं में बिताया बचपन आज भी आंखों में जीवंत है। बिडालिया निवास के नीचे जब सुबह-सुबह कोहरा छंटता था और गांव की छतों पर पहली धूप पड़ती थी, वह दृश्य स्वर्ग जैसा था।",
+      "date": "Sample Memory"
+    },
+    {
+      "id": "story-2",
+      "author": "Anjali Jakhmola",
+      "relation": "Next Generation",
+      "titleEn": "Returning to Our Ancestral Soil",
+      "titleHi": "अपनी जड़ों की ओर वापसी",
+      "textEn": "No matter how far our careers take us in big cities, the walk uphill from the motor road to Tandiyun instantly grounds my spirit. This website is a bridge back to where our story started.",
+      "textHi": "चाहे हम शहरों में कितनी भी दूर चले जाएं, सड़क से गांव की ओर चढ़ाई चढ़ते ही मन को जो सुकून मिलता है, वह कहीं और नहीं मिलता। यह वेबसाइट हमारी जड़ों से जुड़े रहने का सशक्त माध्यम है।",
+      "date": "Sample Memory"
+    }
+  ]
+}

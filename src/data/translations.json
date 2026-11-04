@@ -1,0 +1,264 @@
+{
+  "en": {
+    "siteName": "TANDIYUN",
+    "siteTaglineHi": "पहाड़ों में बसा एक छोटा सा संसार",
+    "siteTaglineEn": "Our Roots. Our Mountains. Our Memories.",
+    "subheading": "A hill village in the serene Garhwal Himalayas of Uttarakhand, India.",
+    "nav": {
+      "home": "Home",
+      "about": "About Tandiyun",
+      "explore": "Explore 3D & Maps",
+      "gallery": "Gallery",
+      "spiritual": "Spiritual Places",
+      "culture": "Culture & Traditions",
+      "community": "Community"
+    },
+    "hero": {
+      "kicker": "पहाड़ों में बसा एक छोटा सा संसार",
+      "title": "TANDIYUN",
+      "tagline": "OUR ROOTS. OUR MOUNTAINS. OUR MEMORIES.",
+      "discoverCta": "Discover Tandiyun",
+      "soundToggleUnmute": "Unmute Sound",
+      "soundToggleMute": "Mute Sound",
+      "playVideo": "Play Video",
+      "pauseVideo": "Pause Video"
+    },
+    "welcome": {
+      "badge": "Sanctuary in the Himalayas",
+      "title": "A Village Cradled by the Mountains",
+      "intro1": "Perched gracefully along the ridges of Uttarakhand, Tandiyun is a living repository of Himalayan warmth, terraced mountain fields, and timeless memories.",
+      "intro2": "This digital sanctuary was created by the village community to preserve our photographs, videos, oral memories, cultural practices, and sacred landmarks for generations to come.",
+      "locationLabel": "Geographical Location",
+      "locationVal": "Garhwal Himalayas, Uttarakhand, India",
+      "coordinatesLabel": "Village Coordinates",
+      "readMore": "Learn More About Tandiyun",
+      "approachNote": "Visitors arrive via the motorable road at Bidaliya Niwaas, from where a tranquil footpath leads uphill into the heart of the village settlement."
+    },
+    "landscape": {
+      "badge": "Pristine Himalayan Topography",
+      "title": "Discover Our Landscape",
+      "subtitle": "From sea of monsoon clouds to sun-dappled pine slopes, explore the authentic beauty captured in original village photographs.",
+      "features": {
+        "terrace": "Terraced Mountain Slopes",
+        "forest": "Dense Oak & Pine Canopies",
+        "mist": "Monsoon Cloud Seas",
+        "approach": "Winding Mountain Road Approach"
+      }
+    },
+    "terrain": {
+      "badge": "Geographical Visualization",
+      "title": "Explore Tandiyun in 3D & Topographic View",
+      "subtitle": "Interactive terrain showcasing the physical relationship between Bidaliya Niwaas beside the motor road and Tandiyun village resting on the hillside above.",
+      "disclaimer": "Conceptual 3D Terrain Prototype — Real elevation survey and satellite mesh calibration will be updated as precise topographical datasets are acquired.",
+      "bidaliyaTitle": "Bidaliya Niwaas",
+      "bidaliyaDesc": "Located beside the motorable road. The common arrival and starting point for travelers.",
+      "villageTitle": "Tandiyun Village",
+      "villageDesc": "Perched on the mountain slope above the road. Accessible via an uphill foot trail.",
+      "uphillTrail": "Uphill Foot Trail (~300m walk / +45m elevation)",
+      "controls": {
+        "reset": "Reset Camera",
+        "fog": "Toggle Morning Mist",
+        "trail": "Toggle Walking Trail",
+        "focusBidaliya": "Bidaliya Niwaas",
+        "focusVillage": "Tandiyun Village",
+        "viewMode3D": "3D Interactive Model",
+        "viewModeMap": "2D Interactive Map"
+      }
+    },
+    "gallery": {
+      "badge": "Visual Archive",
+      "title": "Original Photography of Tandiyun",
+      "subtitle": "Preserving genuine landscape photographs captured in July & August 2020. No stock photos, no synthetic alterations.",
+      "filterAll": "All Photos",
+      "photoCount": "Original photographs preserved",
+      "viewFull": "View Fullscreen",
+      "close": "Close Viewer",
+      "captured": "Captured",
+      "originalDownload": "View Original"
+    },
+    "spiritual": {
+      "badge": "Sacred Heritage",
+      "title": "Spiritual Places Around Tandiyun",
+      "subtitle": "Revered temples and ancient shrines across the surrounding Garhwal hills. Distance calculations are benchmarked from Bidaliya Niwaas as the starting point.",
+      "disclaimer": "The shrines below represent research candidates for regional religious heritage. Routes, distances, and travel times are marked 'to be verified' until confirmed with local village elders.",
+      "startingFrom": "Starting Point: Bidaliya Niwaas",
+      "roadDistLabel": "Road Distance",
+      "trekDistLabel": "Walking / Trek Ascent",
+      "travelTimeLabel": "Approx. Travel Time",
+      "mapsButton": "View on Google Maps",
+      "researchBadge": "Research Candidate"
+    },
+    "culture": {
+      "badge": "Living Heritage",
+      "title": "Culture, Traditions & Living Memories",
+      "subtitle": "The rich fabric of Garhwali life — seasonal festivals honoring nature, authentic mountain cuisine, and traditional slate-roof stone architecture.",
+      "tabs": {
+        "festivals": "Folk Festivals",
+        "food": "Traditional Cuisine",
+        "traditions": "Customs & Architecture"
+      }
+    },
+    "community": {
+      "badge": "Community Voice",
+      "title": "Village Archive & Announcements",
+      "subtitle": "Stay connected with upcoming events, community notices, and shared reflections from elders and diaspora villagers.",
+      "announcementsTitle": "Announcements & Notices",
+      "eventsTitle": "Upcoming Gatherings",
+      "storiesTitle": "Memories of Tandiyun",
+      "shareCta": "Contribute a Memory or Photo",
+      "form": {
+        "nameLabel": "Your Full Name",
+        "namePlaceholder": "e.g., Harish Rawat / Sunita Jakhmola",
+        "relationLabel": "Connection to Tandiyun",
+        "relationPlaceholder": "e.g., Resident, Ancestral Family, Visitor",
+        "titleLabel": "Memory / Story Title",
+        "titlePlaceholder": "e.g., Summer memories on the hill terraces",
+        "messageLabel": "Your Story or Village Memory",
+        "messagePlaceholder": "Write your memories, stories of elders, village folklore, or greetings...",
+        "submit": "Submit Memory to Archive",
+        "submitting": "Saving...",
+        "success": "Your memory has been recorded to the village archive!",
+        "privacyNotice": "Demonstration mode: Saved locally in your browser and ready for future Supabase cloud synchronization."
+      }
+    },
+    "footer": {
+      "tagline": "Our Roots. Our Mountains. Our Memories.",
+      "hindiQuote": "पहाड़ों में बसा एक छोटा सा संसार",
+      "coordinates": "Coordinates: 30.001952° N, 78.834910° E | Altitude: ~1,500m+",
+      "district": "Garhwal Region, Uttarakhand, India",
+      "rights": "All original photographs and videos are preserved under community copyright.",
+      "mantra": "Wherever we go, our roots remain in Tandiyun."
+    }
+  },
+  "hi": {
+    "siteName": "तंडियूं",
+    "siteTaglineHi": "पहाड़ों में बसा एक छोटा सा संसार",
+    "siteTaglineEn": "हमारी जड़ें। हमारे पहाड़। हमारी स्मृतियां।",
+    "subheading": "उत्तराखंड के पावन गढ़वाल हिमालय की शांत पर्वत श्रृंखलाओं में स्थित एक रमणीय पहाड़ी गांव।",
+    "nav": {
+      "home": "मुखपृष्ठ",
+      "about": "तंडियूं परिचय",
+      "explore": "3D एवं मानचित्र",
+      "gallery": "छायाचित्र दीर्घा",
+      "spiritual": "तीर्थ एवं मंदिर",
+      "culture": "संस्कृति एवं परम्परा",
+      "community": "ग्राम समुदाय"
+    },
+    "hero": {
+      "kicker": "पहाड़ों में बसा एक छोटा सा संसार",
+      "title": "तंडियूं",
+      "tagline": "हमारी जड़ें। हमारे पहाड़। हमारी स्मृतियां।",
+      "discoverCta": "तंडियूं की यात्रा करें",
+      "soundToggleUnmute": "ध्वनि चालू करें",
+      "soundToggleMute": "ध्वनि बंद करें",
+      "playVideo": "वीडियो चलाएं",
+      "pauseVideo": "वीडियो रोकें"
+    },
+    "welcome": {
+      "badge": "हिमालय की गोद में",
+      "title": "पहाड़ों के आंचल में बसा हमारा गांव",
+      "intro1": "उत्तराखंड की सुरम्य वादियों में स्थित तंडियूं गांव पहाड़ी अपनत्व, सीढ़ीदार खेतों और सदियों पुरानी स्मृतियों का जीवंत प्रतीक है।",
+      "intro2": "यह डिजिटल अभिलेखागार गांव की मूल धरोहर, मूल चित्रों, वीडियो, लोक संस्कृति एवं पवित्र स्थलों को भावी पीढ़ियों के लिए सहेजने का एक विनम्र प्रयास है।",
+      "locationLabel": "भौगोलिक स्थिति",
+      "locationVal": "गढ़वाल हिमालय, उत्तराखंड, भारत",
+      "coordinatesLabel": "ग्राम निर्देशांक",
+      "readMore": "तंडियूं के बारे में और जानें",
+      "approachNote": "सड़क मार्ग से आने वाले आगंतुक मुख्य मार्ग पर स्थित 'बिडालिया निवास' पहुंचते हैं, जहां से एक शांत पगडंडी चढ़कर गांव की बस्ती तक जाती है।"
+    },
+    "landscape": {
+      "badge": "प्राकृतिक सौंदर्य",
+      "title": "हमारे पर्वत, वादियां एवं प्रकृति",
+      "subtitle": "मानसून के तैरते बादलों से लेकर चीड़ और बांज के सघन जंगलों तक—गांव की वास्तविक मूल तस्वीरों में संजोया गया प्राकृतिक विहंगम रूप।",
+      "features": {
+        "terrace": "हरी-भरी सीढ़ीदार ढलानें",
+        "forest": "बांज एवं चीड़ के सघन वन",
+        "mist": "घाटियों में तैरता बादलों का सागर",
+        "approach": "घुमावदार पर्वतीय पहुंच मार्ग"
+      }
+    },
+    "terrain": {
+      "badge": "त्रि-आयामी भौगोलिक दृश्य",
+      "title": "3D एवं स्थलाकृतिक मानचित्र में तंडियूं",
+      "subtitle": "सड़क पर स्थित बिडालिया निवास और पहाड़ी ढलान पर स्थित तंडियूं गांव के भौगोलिक संबंध को दर्शाने वाला त्रि-आयामी प्रारूप।",
+      "disclaimer": "सैद्धांतिक 3D स्थलाकृति प्रारूप — वास्तविक उपग्रह ऊंचाई डेटा के साथ भविष्य में और अधिक सटीक बनाया जाएगा।",
+      "bidaliyaTitle": "बिडालिया निवास",
+      "bidaliyaDesc": "मोटर सड़क के समीप स्थित। गांव आने वाले सभी यात्रियों का मुख्य आगमन एवं पड़ाव बिंदु।",
+      "villageTitle": "तंडियूं गांव",
+      "villageDesc": "सड़क से ऊपर पहाड़ी ढलान पर स्थित। पैदल चढ़ाई मार्ग द्वारा सुलभ।",
+      "uphillTrail": "पैदल चढ़ाई मार्ग (~300 मीटर / +45 मीटर ऊंचाई)",
+      "controls": {
+        "reset": "कैमरा रीसेट",
+        "fog": "प्रातःकालीन धुंध टॉगल",
+        "trail": "पैदल मार्ग टॉगल",
+        "focusBidaliya": "बिडालिया निवास",
+        "focusVillage": "तंडियूं गांव",
+        "viewMode3D": "3D त्रि-आयामी दृश्य",
+        "viewModeMap": "2D अंतःक्रियात्मक नक्शा"
+      }
+    },
+    "gallery": {
+      "badge": "चित्र संग्रह",
+      "title": "तंडियूं की मूल छायाचित्र दीर्घा",
+      "subtitle": "जुलाई एवं अगस्त २०२० में ली गई मूल फोटोग्राफी। बिना किसी कृत्रिम बदलाव के गांव की प्रामाणिक सुंदरता।",
+      "filterAll": "सभी चित्र",
+      "photoCount": "मूल सुरक्षित चित्र",
+      "viewFull": "पूर्ण आकार में देखें",
+      "close": "बंद करें",
+      "captured": "छायांकन तिथि",
+      "originalDownload": "मूल चित्र देखें"
+    },
+    "spiritual": {
+      "badge": "धार्मिक धरोहर",
+      "title": "तंडियूं के आस-पास के पावन तीर्थ",
+      "subtitle": "गढ़वाल की पहाड़ियों में स्थित आस्था के पावन केंद्र। सभी दूरियां बिडालिया निवास को प्रारंभिक बिंदु मानकर निर्धारित की जा रही हैं।",
+      "disclaimer": "नीचे दिए गए मंदिर क्षेत्रीय धार्मिक धरोहर के शोधित प्रत्याशी हैं। दूरियां एवं मार्ग ग्रामीणों के सत्यापन के बाद अद्यतन किए जा रहे हैं।",
+      "startingFrom": "प्रारंभिक बिंदु: बिडालिया निवास",
+      "roadDistLabel": "सड़क दूरी",
+      "trekDistLabel": "पैदल / चढ़ाई दूरी",
+      "travelTimeLabel": "अनुमानित यात्रा समय",
+      "mapsButton": "गूगल मैप पर देखें",
+      "researchBadge": "शोधित प्रत्याशी"
+    },
+    "culture": {
+      "badge": "लोक संस्कृति",
+      "title": "गढ़वाली संस्कृति, लोक पर्व एवं परंपराएं",
+      "subtitle": "प्रकृति के साथ सामंजस्य बिठाने वाले लोक उत्सव, पौष्टिक पारंपरिक व्यंजन और स्लेट की छतों वाला पारम्परिक पहाड़ी स्थापत्य।",
+      "tabs": {
+        "festivals": "लोक पर्व",
+        "food": "पारंपरिक खानपान",
+        "traditions": "रीति-रिवाज व वास्तुकला"
+      }
+    },
+    "community": {
+      "badge": "ग्राम संवाद",
+      "title": "ग्राम सूचना पट्ट एवं संस्मरण",
+      "subtitle": "गांव के आयोजनों, सूचनाओं एवं देश-विदेश में बसे ग्रामवासियों की स्मृतियों से जुड़ें।",
+      "announcementsTitle": "महत्वपूर्ण सूचनाएं",
+      "eventsTitle": "आगामी कार्यक्रम",
+      "storiesTitle": "तंडियूं की स्मृतियां",
+      "shareCta": "अपना संस्मरण या चित्र साझा करें",
+      "form": {
+        "nameLabel": "आपका पूरा नाम",
+        "namePlaceholder": "उदा. हरीश सिंह रावत / अनिता जखमोला",
+        "relationLabel": "तंडियूं से संबंध",
+        "relationPlaceholder": "उदा. मूल निवासी, प्रवासी परिवार, शुभचिंतक",
+        "titleLabel": "संस्मरण का शीर्षक",
+        "titlePlaceholder": "उदा. गांव की सीढ़ीदार खेतों की यादें",
+        "messageLabel": "आपका संस्मरण / संदेश",
+        "messagePlaceholder": "गांव से जुड़ी अपनी पुरानी यादें, पूर्वजों के किस्से या विचार यहां लिखें...",
+        "submit": "ग्राम अभिलेखागार में सुरक्षित करें",
+        "submitting": "सहेजा जा रहा है...",
+        "success": "आपका संस्मरण ग्राम अभिलेखागार में दर्ज कर लिया गया है!",
+        "privacyNotice": "प्रदर्शनात्मक मोड: आपके ब्राउज़र में सुरक्षित, भविष्य में क्लाउड डेटाबेस से संबद्ध होगा।"
+      }
+    },
+    "footer": {
+      "tagline": "हमारी जड़ें। हमारे पहाड़। हमारी स्मृतियां।",
+      "hindiQuote": "पहाड़ों में बसा एक छोटा सा संसार",
+      "coordinates": "निर्देशांक: 30.001952° N, 78.834910° E | ऊंचाई: ~1,500m+",
+      "district": "गढ़वाल मंडल, उत्तराखंड, भारत",
+      "rights": "सभी मूल तस्वीरें एवं वीडियो ग्राम समुदाय के संरक्षण में हैं।",
+      "mantra": "चाहे हम कहीं भी जाएं, हमारी जड़ें तंडियूं में ही हैं।"
+    }
+  }
+}
