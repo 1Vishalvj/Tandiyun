@@ -71,14 +71,17 @@
     },
     "spiritual": {
       "badge": "Spiritual Heritage",
-      "title": "Faith That Connects Us",
-      "subtitle": "Revered temples and ancient pilgrimage shrines across Pauri Garhwal. All distances are measured as one-way road journeys benchmarked from Bidaliya Niwaas.",
+      "title": "Temples & Sacred Places Around टांडियूं",
+      "subtitle": "Revered Shaktipeeths, ancient stone sanctuaries, and sacred mountain shrines of Pauri Garhwal. All distances are measured as one-way road journeys benchmarked from Bidaliya Niwaas.",
       "distanceLabel": "Road distance from Bidaliya Niwaas (one way)",
-      "exploreAll": "Explore All Spiritual Destinations",
+      "exploreAll": "Explore All Sacred Destinations",
       "startingBenchmark": "Starting Point: Bidaliya Niwaas (30.0026375, 78.8332031)",
       "directionsCta": "Get Google Maps Directions",
       "officialSite": "Official Website",
-      "viewDetails": "View Destination Details",
+      "viewDetails": "View Temple Details",
+      "photoComingSoon": "Authentic Photograph Coming Soon",
+      "photoComingSoonSub": "Original archival photograph undergoing authentic community verification",
+      "backToTemples": "← Back to All Temples",
       "close": "Close"
     },
     "culture": {
@@ -212,14 +215,17 @@
     },
     "spiritual": {
       "badge": "आध्यात्मिक धरोहर",
-      "title": "आस्था जो हमें जोड़ती है",
-      "subtitle": "पौड़ी गढ़वाल के पावन तीर्थ एवं प्राचीन मंदिर। सभी दूरियां बिडालिया निवास को प्रारंभिक बिंदु मानकर एकतरफा सड़क दूरी के रूप में दर्शायी गई हैं।",
+      "title": "टांडियूं और आसपास के पवित्र स्थल",
+      "subtitle": "पौड़ी गढ़वाल के पावन शक्तिपीठ, शिखर मंदिर और प्राचीन धार्मिक स्थल। सभी दूरियां बिडालिया निवास को प्रारंभिक बिंदु मानकर एकतरफा सड़क दूरी के रूप में दर्शायी गई हैं।",
       "distanceLabel": "Road distance from Bidaliya Niwaas (one way)",
       "exploreAll": "सभी तीर्थ स्थलों का अन्वेषण करें",
       "startingBenchmark": "प्रारंभिक बिंदु: बिडालिया निवास (30.0026375, 78.8332031)",
       "directionsCta": "गूगल मैप्स पर मार्ग देखें",
       "officialSite": "आधिकारिक वेबसाइट",
-      "viewDetails": "विस्तृत विवरण देखें",
+      "viewDetails": "मंदिर का संपूर्ण विवरण देखें",
+      "photoComingSoon": "प्रामाणिक छायाचित्र संकलन प्रक्रिया में",
+      "photoComingSoonSub": "मूल प्रामाणिक छायाचित्र का संकलन एवं ग्राम सत्यापन प्रगति पर है",
+      "backToTemples": "← सभी मंदिरों की सूची पर लौटें",
       "close": "बंद करें"
     },
     "culture": {

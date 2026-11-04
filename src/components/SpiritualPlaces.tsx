@@ -4,24 +4,38 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
-import spiritualData from '@/data/spiritual-places.json';
-import { Sparkles, MapPin, Footprints, ExternalLink, AlertTriangle, X, Compass, Globe, Info } from 'lucide-react';
+import templesData from '@/data/temples.json';
+import { Sparkles, MapPin, Footprints, ExternalLink, AlertTriangle, AlertCircle, X, Compass, Globe, Info, ShieldCheck, ArrowRight } from 'lucide-react';
 
 interface TempleItem {
   id: string;
+  slug: string;
   nameEn: string;
   nameHi: string;
-  deity: string;
-  category: string;
-  descriptionEn: string;
-  descriptionHi: string;
+  deityEn: string;
+  deityHi: string;
+  categoryEn: string;
+  categoryHi: string;
+  locationEn: string;
+  locationHi: string;
   roadDistance: string;
-  walkingInfo: string;
+  distanceStatus: string;
+  distanceStatusEn: string;
+  distanceStatusHi: string;
+  drivingInfoEn: string;
+  drivingInfoHi: string;
+  walkingInfoEn: string;
+  walkingInfoHi: string;
+  significanceEn: string;
+  significanceHi: string;
   festivals: string[];
   officialWebsite: string | null;
   districtInfo: string | null;
+  wikipediaUrl?: string;
   googleMapsUrl: string;
-  image: string;
+  image: string | null;
+  hasAuthenticPhoto: boolean;
+  photoCredit?: string;
 }
 
 interface SpiritualPlacesProps {
@@ -33,7 +47,7 @@ export const SpiritualPlaces: React.FC<SpiritualPlacesProps> = ({ limit, showAll
   const { t, language } = useLanguage();
   const [selectedTemple, setSelectedTemple] = useState<TempleItem | null>(null);
 
-  const temples = spiritualData as TempleItem[];
+  const temples = templesData as TempleItem[];
   const displayedTemples = limit ? temples.slice(0, limit) : temples;
 
   return (
@@ -75,35 +89,53 @@ export const SpiritualPlaces: React.FC<SpiritualPlacesProps> = ({ limit, showAll
           </div>
         </div>
 
-        {/* Temple Cards Grid: Vertically stacked on mobile, 2 col on tablet, 3 col on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Temple Cards Grid: Vertically stacked on mobile, 2 col on tablet, 2 or 4 col on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {displayedTemples.map((temple) => (
             <div
               key={temple.id}
               className="group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-mist/15 bg-forest/70 hover:bg-forest/90 backdrop-blur-md overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:border-earth/60"
             >
               <div>
-                {/* Temple Image */}
-                <div className="relative h-48 sm:h-56 w-full overflow-hidden bg-forest-dark">
-                  <Image
-                    src={temple.image}
-                    alt={language === 'hi' ? temple.nameHi : temple.nameEn}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/20 to-transparent" />
+                {/* Temple Image or Authentic Coming Soon Placeholder */}
+                <div className="relative h-52 sm:h-64 w-full overflow-hidden bg-forest-dark">
+                  {temple.hasAuthenticPhoto && temple.image ? (
+                    <>
+                      <Image
+                        src={temple.image}
+                        alt={language === 'hi' ? temple.nameHi : temple.nameEn}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/20 to-transparent" />
+                    </>
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-forest-dark via-deepGreen-dark to-forest border-b border-mist/10">
+                      <div className="w-12 h-12 rounded-full bg-forest border border-earth/40 flex items-center justify-center text-earth-light mb-2.5">
+                        <Sparkles className="w-5 h-5" />
+                      </div>
+                      <span className="text-xs font-mono uppercase tracking-wider text-earth-light font-semibold">
+                        {language === 'hi' ? 'प्रामाणिक छायाचित्र संकलन प्रक्रिया में' : 'Authentic Photograph Coming Soon'}
+                      </span>
+                      <span className="text-[11px] text-mist/60 mt-1 max-w-xs font-serif">
+                        {language === 'hi'
+                          ? 'मूल मंदिर का प्रामाणिक छायाचित्र सत्यापन उपरांत प्रकाशित किया जाएगा'
+                          : 'Genuine photographic documentation undergoing community verification'}
+                      </span>
+                    </div>
+                  )}
 
                   {/* Category Pill */}
-                  <div className="absolute top-3 left-3">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] sm:text-[11px] font-mono bg-forest-dark/85 backdrop-blur-md text-earth-light border border-earth/30">
-                      <span>{temple.category}</span>
+                  <div className="absolute top-3 left-3 z-10">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] sm:text-[11px] font-mono bg-forest-dark/90 backdrop-blur-md text-earth-light border border-earth/30">
+                      <span>{language === 'hi' ? temple.categoryHi : temple.categoryEn}</span>
                     </span>
                   </div>
 
                   {/* One-Way Road Distance Badge */}
-                  <div className="absolute bottom-3 right-3">
-                    <div className="px-2.5 py-1 rounded-lg bg-forest-dark/95 backdrop-blur-md border border-earth/40 text-right">
+                  <div className="absolute bottom-3 right-3 z-10">
+                    <div className="px-3 py-1.5 rounded-xl bg-forest-dark/95 backdrop-blur-md border border-earth/40 text-right shadow-lg">
                       <div className="text-[9px] uppercase font-mono tracking-wider text-mist/75">
                         {language === 'hi' ? 'सड़क दूरी' : 'One Way'}
                       </div>
@@ -115,43 +147,45 @@ export const SpiritualPlaces: React.FC<SpiritualPlacesProps> = ({ limit, showAll
                 </div>
 
                 {/* Content */}
-                <div className="p-4 sm:p-6">
+                <div className="p-5 sm:p-7">
+                  {/* Status Badge */}
+                  <div className="mb-2">
+                    {temple.distanceStatus === 'Verified' ? (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-mono text-emerald-300 bg-emerald-950/40 px-2.5 py-0.5 rounded border border-emerald-800/40">
+                        <ShieldCheck className="w-3 h-3" />
+                        <span>{language === 'hi' ? temple.distanceStatusHi : temple.distanceStatusEn}</span>
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-mono text-amber-300 bg-amber-950/40 px-2.5 py-0.5 rounded border border-amber-800/40">
+                        <AlertCircle className="w-3 h-3" />
+                        <span>{language === 'hi' ? temple.distanceStatusHi : temple.distanceStatusEn}</span>
+                      </span>
+                    )}
+                  </div>
+
                   {/* Temple Name */}
                   <h3 className="font-heading text-xl sm:text-2xl text-ivory font-bold group-hover:text-earth-light transition-colors">
                     {language === 'hi' ? temple.nameHi : temple.nameEn}
                   </h3>
 
-                  {/* Deity */}
-                  <div className="text-xs font-semibold text-earth-light mt-1">
-                    {temple.deity}
+                  {/* Deity & Location */}
+                  <div className="text-xs font-semibold text-earth-light mt-1 flex items-center gap-1.5">
+                    <span>{language === 'hi' ? temple.deityHi : temple.deityEn}</span>
+                  </div>
+                  <div className="text-[11px] text-mist/70 font-mono mt-0.5 flex items-center gap-1">
+                    <MapPin className="w-3 h-3 text-earth-light shrink-0" />
+                    <span>{language === 'hi' ? temple.locationHi : temple.locationEn}</span>
                   </div>
 
                   {/* Short Introduction */}
-                  <p className="text-xs sm:text-sm text-mist/85 mt-2.5 leading-relaxed font-serif line-clamp-3">
-                    {language === 'hi' ? temple.descriptionHi : temple.descriptionEn}
+                  <p className="text-xs sm:text-sm text-mist/85 mt-3 leading-relaxed font-serif line-clamp-3">
+                    {language === 'hi' ? temple.significanceHi : temple.significanceEn}
                   </p>
-
-                  {/* Festivals Preview */}
-                  <div className="mt-3.5 pt-3.5 border-t border-mist/10">
-                    <div className="text-[10px] uppercase tracking-wider text-mist/60 font-mono mb-1.5">
-                      {language === 'hi' ? 'प्रमुख उत्सव' : 'Festivals'}
-                    </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {temple.festivals.slice(0, 2).map((fest) => (
-                        <span
-                          key={fest}
-                          className="px-2 py-0.5 rounded-full bg-forest-dark text-[10px] sm:text-[11px] text-mist/85 font-mono border border-mist/10"
-                        >
-                          {fest}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </div>
 
               {/* Card Footer: Distance Metric & Touch Actions */}
-              <div className="p-4 sm:p-6 pt-0 space-y-3">
+              <div className="p-5 sm:p-7 pt-0 space-y-3">
                 <div className="p-3 rounded-xl bg-forest-dark/70 border border-mist/10 space-y-1.5">
                   <div className="flex items-start justify-between text-xs font-mono">
                     <span className="text-mist/70 flex items-center gap-1.5">
@@ -169,19 +203,19 @@ export const SpiritualPlaces: React.FC<SpiritualPlacesProps> = ({ limit, showAll
                       <span className="text-[10px] sm:text-[11px]">{language === 'hi' ? 'पैदल मार्ग:' : 'Walking:'}</span>
                     </span>
                     <span className="text-mist/85 text-[10px] sm:text-[11px] text-right line-clamp-1 ml-2">
-                      {temple.walkingInfo}
+                      {language === 'hi' ? temple.walkingInfoHi : temple.walkingInfoEn}
                     </span>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 pt-1">
-                  <button
-                    onClick={() => setSelectedTemple(temple)}
+                  <Link
+                    href={`/temples/${temple.slug}`}
                     className="inline-flex items-center justify-center gap-1.5 min-h-[44px] py-2 px-3 rounded-xl bg-forest-dark hover:bg-forest text-xs font-medium text-ivory border border-mist/20 hover:border-earth transition-colors active:scale-95"
                   >
                     <Info className="w-3.5 h-3.5 text-earth-light shrink-0" />
-                    <span>{language === 'hi' ? 'विवरण' : 'Details'}</span>
-                  </button>
+                    <span>{language === 'hi' ? 'संपूर्ण विवरण' : 'Temple Details'}</span>
+                  </Link>
 
                   <a
                     href={temple.googleMapsUrl}
@@ -199,14 +233,14 @@ export const SpiritualPlaces: React.FC<SpiritualPlacesProps> = ({ limit, showAll
         </div>
 
         {/* Homepage CTA to Explore Full Directory */}
-        {showAllCta && limit && temples.length > limit && (
+        {showAllCta && (
           <div className="mt-12 sm:mt-16 text-center">
             <Link
-              href="/spiritual"
+              href="/temples"
               className="inline-flex items-center justify-center gap-2.5 min-h-[48px] px-6 sm:px-8 py-3.5 rounded-xl bg-earth hover:bg-earth-light text-ivory font-semibold text-xs sm:text-sm tracking-wide shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
             >
               <Compass className="w-4 h-4 shrink-0" />
-              <span>{language === 'hi' ? 'सभी ९ पवित्र तीर्थ देखें' : 'Explore All 9 Spiritual Destinations'}</span>
+              <span>{language === 'hi' ? 'सभी पवित्र तीर्थ एवं दूरी तालिका देखें' : 'Explore All Sacred Destinations & Distance Matrix'}</span>
             </Link>
           </div>
         )}
@@ -219,126 +253,92 @@ export const SpiritualPlaces: React.FC<SpiritualPlacesProps> = ({ limit, showAll
           onClick={() => setSelectedTemple(null)}
         >
           <div
-            className="relative w-full max-w-3xl max-h-[92vh] overflow-y-auto rounded-2xl sm:rounded-3xl bg-deepGreen-dark border border-mist/25 p-4 sm:p-8 shadow-2xl text-ivory"
+            className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl bg-deepGreen-dark border border-mist/20 shadow-2xl p-6 sm:p-8 space-y-6"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Accessible Touch Close Button (44x44px) */}
-            <button
-              onClick={() => setSelectedTemple(null)}
-              className="absolute top-3 right-3 sm:top-5 sm:right-5 flex items-center justify-center min-w-[44px] min-h-[44px] rounded-full bg-forest text-mist hover:text-ivory hover:bg-forest-light border border-mist/20 transition-colors z-20 active:scale-95"
-              aria-label="Close modal"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            {/* Modal Image */}
-            <div className="relative h-48 sm:h-72 w-full rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6 bg-forest">
-              <Image
-                src={selectedTemple.image}
-                alt={language === 'hi' ? selectedTemple.nameHi : selectedTemple.nameEn}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-deepGreen-dark via-transparent to-black/30" />
-              <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 right-12">
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-mono bg-forest/80 backdrop-blur-md text-earth-light border border-earth/30">
-                  {selectedTemple.category}
+            {/* Modal Header */}
+            <div className="flex items-start justify-between gap-4 border-b border-mist/10 pb-4">
+              <div>
+                <span className="text-xs font-mono text-earth-light uppercase tracking-wider block">
+                  {language === 'hi' ? selectedTemple.categoryHi : selectedTemple.categoryEn}
                 </span>
-                <h3 className="font-heading text-xl sm:text-3xl text-ivory font-bold mt-1.5 leading-tight">
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-ivory mt-1">
                   {language === 'hi' ? selectedTemple.nameHi : selectedTemple.nameEn}
                 </h3>
-                <div className="text-xs sm:text-sm font-semibold text-earth-light">
-                  {selectedTemple.deity}
-                </div>
-              </div>
-            </div>
-
-            {/* Modal Details */}
-            <div className="space-y-4 sm:space-y-6 text-xs sm:text-sm">
-              {/* Significance */}
-              <div>
-                <h4 className="text-[11px] sm:text-xs uppercase font-mono tracking-widest text-earth-light font-semibold mb-1.5">
-                  {language === 'hi' ? 'धार्मिक एवं सांस्कृतिक महत्व' : 'Religious & Cultural Significance'}
-                </h4>
-                <p className="text-mist/90 leading-relaxed font-serif text-sm sm:text-base">
-                  {language === 'hi' ? selectedTemple.descriptionHi : selectedTemple.descriptionEn}
+                <p className="text-xs font-mono text-mist/75 mt-1">
+                  {language === 'hi' ? selectedTemple.deityHi : selectedTemple.deityEn}
                 </p>
               </div>
 
-              {/* Distance & Walking Information */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-forest/70 border border-mist/15 space-y-2.5">
-                <h4 className="text-[11px] sm:text-xs uppercase font-mono tracking-widest text-earth-light font-semibold">
-                  {language === 'hi' ? 'यात्रा विवरण एवं पहुंच मार्ग' : 'Journey Metrics & Approach'}
-                </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono pt-1">
-                  <div>
-                    <span className="text-mist/70 block mb-0.5">Road distance from Bidaliya Niwaas (one way):</span>
-                    <span className="text-sm sm:text-base font-bold text-earth-light">{selectedTemple.roadDistance}</span>
-                  </div>
-                  <div>
-                    <span className="text-mist/70 block mb-0.5">Walking / Trek Details:</span>
-                    <span className="text-xs sm:text-sm text-mist/90">{selectedTemple.walkingInfo}</span>
-                  </div>
-                </div>
-              </div>
+              <button
+                onClick={() => setSelectedTemple(null)}
+                className="p-2 rounded-full bg-forest hover:bg-forest-light text-ivory border border-mist/20 transition-colors shrink-0"
+                aria-label="Close details"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
 
-              {/* Festivals */}
-              <div>
-                <h4 className="text-[11px] sm:text-xs uppercase font-mono tracking-widest text-earth-light font-semibold mb-1.5">
-                  {language === 'hi' ? 'वार्षिक पर्व एवं मेले' : 'Festivals & Pilgrimage Events'}
-                </h4>
-                <div className="flex flex-wrap gap-1.5">
-                  {selectedTemple.festivals.map((fest) => (
-                    <span
-                      key={fest}
-                      className="px-2.5 py-1 rounded-xl bg-forest text-[11px] sm:text-xs text-ivory font-mono border border-mist/15"
-                    >
-                      {fest}
-                    </span>
-                  ))}
-                </div>
+            {/* Modal Image or Placeholder */}
+            {selectedTemple.hasAuthenticPhoto && selectedTemple.image ? (
+              <div className="relative h-60 w-full rounded-2xl overflow-hidden border border-mist/20">
+                <Image
+                  src={selectedTemple.image}
+                  alt={selectedTemple.nameEn}
+                  fill
+                  className="object-cover"
+                />
               </div>
-
-              {/* Links & Actions */}
-              <div className="pt-3 border-t border-mist/15 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  {selectedTemple.officialWebsite && (
-                    <a
-                      href={selectedTemple.officialWebsite}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-mono text-earth-light hover:underline min-h-[36px]"
-                    >
-                      <Globe className="w-3.5 h-3.5" />
-                      <span>Official Website</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  )}
-                  {selectedTemple.districtInfo && (
-                    <a
-                      href={selectedTemple.districtInfo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-mono text-mist/75 hover:text-ivory hover:underline min-h-[36px]"
-                    >
-                      <Info className="w-3.5 h-3.5" />
-                      <span>District Portal</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  )}
-                </div>
-
-                <a
-                  href={selectedTemple.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 min-h-[44px] px-5 py-2.5 rounded-xl bg-earth hover:bg-earth-light text-xs font-semibold text-ivory transition-colors shadow-lg active:scale-95 text-center"
-                >
-                  <MapPin className="w-4 h-4 shrink-0" />
-                  <span>{language === 'hi' ? 'गूगल मैप्स दिशा-मार्ग (बिडालिया निवास से)' : 'Directions from Bidaliya Niwaas'}</span>
-                  <ExternalLink className="w-3.5 h-3.5 shrink-0" />
-                </a>
+            ) : (
+              <div className="py-10 px-4 text-center rounded-2xl bg-forest-dark border border-mist/15">
+                <Sparkles className="w-8 h-8 text-earth-light mx-auto mb-2" />
+                <span className="text-xs font-mono text-earth-light uppercase font-semibold">
+                  {language === 'hi' ? 'प्रामाणिक छायाचित्र संकलन प्रक्रिया में' : 'Authentic Photograph Coming Soon'}
+                </span>
               </div>
+            )}
+
+            {/* Description */}
+            <div className="space-y-2">
+              <span className="text-xs font-mono uppercase tracking-wider text-earth-light block">
+                {language === 'hi' ? 'आध्यात्मिक परिचय एवं महत्व' : 'Spiritual Significance'}
+              </span>
+              <p className="text-sm text-mist/90 leading-relaxed font-serif">
+                {language === 'hi' ? selectedTemple.significanceHi : selectedTemple.significanceEn}
+              </p>
+            </div>
+
+            {/* Distance & Travel Box */}
+            <div className="p-4 rounded-xl bg-forest/50 border border-mist/15 space-y-2 text-xs font-mono">
+              <div className="flex justify-between items-center text-ivory">
+                <span className="text-mist/70">Road distance from Bidaliya Niwaas (one way):</span>
+                <span className="text-earth-light font-bold">{selectedTemple.roadDistance}</span>
+              </div>
+              <div className="pt-1 border-t border-mist/10 text-mist/85">
+                <span className="text-earth-light">{language === 'hi' ? 'पैदल मार्ग: ' : 'Walking Approach: '}</span>
+                <span>{language === 'hi' ? selectedTemple.walkingInfoHi : selectedTemple.walkingInfoEn}</span>
+              </div>
+            </div>
+
+            {/* Actions */}
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+              <Link
+                href={`/temples/${selectedTemple.slug}`}
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-forest hover:bg-forest-dark border border-mist/20 text-xs font-mono text-ivory transition-colors"
+              >
+                <span>{language === 'hi' ? 'विस्तृत पृष्ठ खोलें' : 'Open Dedicated Page'}</span>
+                <ArrowRight className="w-3.5 h-3.5 text-earth-light" />
+              </Link>
+
+              <a
+                href={selectedTemple.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-earth hover:bg-earth-light text-xs font-semibold text-ivory transition-colors shadow-md"
+              >
+                <span>{language === 'hi' ? 'गूगल मैप्स पर मार्ग' : 'Open in Google Maps'}</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
         </div>

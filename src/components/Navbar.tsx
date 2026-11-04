@@ -54,7 +54,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isMuted, onToggleSound }) => {
     { href: '/about', label: t.nav.about },
     { href: '/explore', label: t.nav.explore },
     { href: '/gallery', label: t.nav.gallery },
-    { href: '/spiritual', label: t.nav.spiritual },
+    { href: '/temples', label: t.nav.spiritual },
     { href: '/culture', label: t.nav.culture },
     { href: '/stories', label: t.nav.stories },
     { href: '/community', label: t.nav.community },
