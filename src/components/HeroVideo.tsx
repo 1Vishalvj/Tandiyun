@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { Volume2, VolumeX, ChevronDown, Play, Pause, Mountain } from 'lucide-react';
+import { Volume2, VolumeX, Play, Pause, ChevronDown, Mountain } from 'lucide-react';
 
 interface HeroVideoProps {
   isMuted: boolean;
@@ -10,10 +10,11 @@ interface HeroVideoProps {
 }
 
 export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
+  // Sync video muted state with props
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.muted = isMuted;
@@ -21,28 +22,24 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
   }, [isMuted]);
 
   const toggleSound = () => {
-    if (videoRef.current) {
-      const nextMuted = !isMuted;
-      videoRef.current.muted = nextMuted;
-      setIsMuted(nextMuted);
-    }
+    setIsMuted((prev) => !prev);
   };
 
   const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        videoRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
-      }
+    if (!videoRef.current) return;
+    if (isPlaying) {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      videoRef.current.play();
+      setIsPlaying(true);
     }
   };
 
   const scrollToWelcome = () => {
-    const target = document.querySelector('#welcome-section');
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+    const welcomeEl = document.querySelector('#welcome-section');
+    if (welcomeEl) {
+      welcomeEl.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -72,23 +69,35 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
         {/* Mountain Icon / Top Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-mist/20 bg-deepGreen/60 backdrop-blur-md mb-6 animate-fade-in shadow-lg">
           <Mountain className="w-3.5 h-3.5 text-earth-light" />
-          <span className="font-devanagari text-sm sm:text-base text-mist/95 tracking-wide">
+          <span className="font-devanagari text-sm sm:text-base text-mist/95 tracking-normal">
             {t.hero.kicker}
           </span>
         </div>
 
-        {/* Village Title */}
-        <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-[0.22em] text-ivory uppercase leading-none drop-shadow-2xl mb-3">
+        {/* Village Title - Strict formatting: no letter-spacing in Devanagari */}
+        <h1
+          className={`text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold text-ivory uppercase leading-tight drop-shadow-2xl mb-3 ${
+            language === 'hi'
+              ? 'font-devanagari tracking-normal'
+              : 'font-heading tracking-[0.22em]'
+          }`}
+        >
           {t.hero.title}
         </h1>
 
-        {/* Hindi Village Subtitle with exact spelling टांडियूं */}
-        <div className="font-devanagari text-xl sm:text-2xl md:text-3xl text-mist/90 mb-4 tracking-widest font-normal drop-shadow">
-          टांडियूं
-        </div>
+        {/* Subtitle */}
+        {language === 'en' ? (
+          <div className="font-devanagari text-2xl sm:text-3xl md:text-4xl text-mist/90 mb-4 tracking-normal font-normal drop-shadow">
+            टांडियूं
+          </div>
+        ) : (
+          <div className="font-heading text-lg sm:text-2xl text-mist/90 mb-4 tracking-[0.25em] font-light drop-shadow uppercase">
+            TANDIYUN
+          </div>
+        )}
 
-        {/* English Tagline */}
-        <p className="font-serif italic text-sm sm:text-lg md:text-xl text-ivory/85 tracking-[0.16em] uppercase font-light max-w-3xl mb-8 drop-shadow-md">
+        {/* Tagline */}
+        <p className="font-serif italic text-sm sm:text-lg md:text-xl text-ivory/85 tracking-wide font-light max-w-3xl mb-8 drop-shadow-md">
           {t.hero.tagline}
         </p>
 
@@ -124,7 +133,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
               ) : (
                 <>
                   <Volume2 className="w-4 h-4 text-earth-light" />
-                  <span className="hidden sm:inline text-earth-light">{t.hero.soundToggleMute}</span>
+                  <span className="hidden sm:inline">{t.hero.soundToggleMute}</span>
                 </>
               )}
             </button>
@@ -133,22 +142,20 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
               onClick={togglePlay}
               className="p-3.5 rounded-full bg-deepGreen/70 hover:bg-forest border border-mist/20 text-ivory backdrop-blur-md transition-all"
               title={isPlaying ? t.hero.pauseVideo : t.hero.playVideo}
-              aria-label={isPlaying ? 'Pause' : 'Play'}
             >
-              {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+              {isPlaying ? <Pause className="w-4 h-4 text-mist" /> : <Play className="w-4 h-4 text-earth-light" />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Floating Scroll Indicator */}
-      <div
-        onClick={scrollToWelcome}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 cursor-pointer flex flex-col items-center text-mist/60 hover:text-ivory transition-colors group"
-      >
-        <span className="text-[10px] uppercase tracking-[0.25em] mb-2 font-mono">Scroll</span>
-        <div className="w-5 h-9 rounded-full border-2 border-mist/30 flex items-start justify-center p-1 group-hover:border-earth transition-colors">
-          <div className="w-1 h-2 rounded-full bg-earth-light animate-bounce" />
+      {/* Bottom Scroll Indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 opacity-70 hover:opacity-100 transition-opacity">
+        <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-mist/70">
+          Scroll
+        </span>
+        <div className="w-4 h-7 rounded-full border border-mist/40 flex items-start justify-center p-1">
+          <div className="w-1 h-2 bg-earth-light rounded-full animate-bounce" />
         </div>
       </div>
     </section>
