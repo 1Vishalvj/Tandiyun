@@ -13,7 +13,8 @@ interface Story {
   titleHi: string;
   textEn: string;
   textHi: string;
-  date: string;
+  date?: string;
+  isSample?: boolean;
 }
 
 export const CommunitySection: React.FC = () => {
@@ -52,7 +53,7 @@ export const CommunitySection: React.FC = () => {
         author: name.trim(),
         relation: relation.trim() || (language === 'hi' ? 'ग्रामवासी' : 'Villager / Friend'),
         titleEn: title.trim() || 'A Memory of Tandiyun',
-        titleHi: title.trim() || 'तंडियूं का एक संस्मरण',
+        titleHi: title.trim() || 'टांडियूं का एक संस्मरण',
         textEn: message.trim(),
         textHi: message.trim(),
         date: new Date().toLocaleDateString('en-US', {
@@ -271,7 +272,7 @@ export const CommunitySection: React.FC = () => {
             <div>
               <div className="flex items-center gap-2 text-sm uppercase font-mono tracking-wider text-earth-light mb-4">
                 <MessageSquareQuote className="w-4 h-4" />
-                <span>{t.community.storiesTitle} ({stories.length})</span>
+                <span>{t.community.memoriesTitle} ({stories.length})</span>
               </div>
 
               <div className="space-y-4">

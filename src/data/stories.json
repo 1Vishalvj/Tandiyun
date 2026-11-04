@@ -1,0 +1,44 @@
+{
+  "sections": [
+    {
+      "id": "village-history",
+      "titleEn": "History & Roots of Tandiyun",
+      "titleHi": "टांडियूं का इतिहास एवं विरासत",
+      "subtitleEn": "Preserving the oral memories and heritage of our mountain home in Pauri Garhwal.",
+      "subtitleHi": "पौड़ी गढ़वाल में हमारे पैतृक गांव के मौखिक इतिहास और धरोहर का संरक्षण।",
+      "contentEn": "Perched on the mountain slopes of Pauri Garhwal, Tandiyun (टांडियूं) has been home to generations of resilient mountain families who shaped its terraced hillsides, tended natural freshwater springs (dharas), and nurtured sacred village traditions. While formal written colonial records of small mountain hamlets are scarce, the living history of Tandiyun lives on in the oral narratives passed down from grandparents to grandchildren during quiet winter evenings beside wood fires.",
+      "contentHi": "पौड़ी गढ़वाल की पहाड़ी ढलानों पर बसा टांडियूं पीढ़ियों से स्वाभिमानी और प्रकृति-प्रेमी परिवारों का घर रहा है, जिन्होंने सीढ़ीदार खेतों को तराशा, प्राकृतिक जलस्रोतों (धारों) को सहेजा और ग्राम्य परम्पराओं को जीवित रखा। हालांकि छोटे पर्वतीय गांवों के ऐतिहासिक दस्तावेज सीमित हैं, परंतु टांडियूं का वास्तविक इतिहास बुजुर्गों के उन संस्मरणों में धड़कता है जो पीढ़ी-दर-पीढ़ी सुनाए जाते रहे हैं।",
+      "placeholderNoteEn": "Community Archive Note: Written historical records, clan genealogies (vanshavalis), and founding memories are being gathered directly from village elders. We invite all families to contribute archival documents.",
+      "placeholderNoteHi": "सामुदायिक सूचना: गांव का लिखित इतिहास एवं वंशावली के प्रामाणिक विवरण बुजुर्गों के माध्यम से संकलित किए जा रहे हैं।"
+    },
+    {
+      "id": "elders-voices",
+      "titleEn": "Stories from the Elders",
+      "titleHi": "बुजुर्गों के संस्मरण",
+      "subtitleEn": "Timeless reflections on childhood, mountain agriculture, and community unity.",
+      "subtitleHi": "बचपन, पारंपरिक खेती और सामूहिक अपनत्व के अविस्मरणीय अनुभव।",
+      "contentEn": "The elders recall a time when life moved to the rhythm of the mountain seasons. Before the motor road reached Bidaliya Niwaas, journeys were made on foot along winding bridle paths shaded by ancient oak and rhododendron canopies. Village life was built on 'Padtal'—collective community assistance where every family joined hands to harvest crops, thatch roofs, and celebrate life milestones together.",
+      "contentHi": "बुजुर्ग याद करते हैं कि जब मोटर सड़क बिडालिया निवास तक नहीं पहुंची थी, तब जीवन पैदल पगडंडियों और ऋतुओं के अनुसार चलता था। गांव में 'पड़ताल' (सामूहिक मदद) की सुंदर परम्परा थी—चाहे फसल की कटाई हो या छत पर स्लेट (पाखणा) लगाना, पूरा गांव एक परिवार की तरह सहयोग करता था।",
+      "placeholderNoteEn": "Oral History Placeholder: Audio recordings and transcriptions of elder interviews are currently in development.",
+      "placeholderNoteHi": "मौखिक इतिहास: बुजुर्गों के साक्षात्कारों की ऑडियो एवं लिखित रिकॉर्डिंग संकलन प्रक्रिया में है।"
+    },
+    {
+      "id": "traditional-life",
+      "titleEn": "Everyday Mountain Life in the Hills",
+      "titleHi": "पहाड़ी जीवन का दैनिक ताना-बाना",
+      "subtitleEn": "Waking before sunrise to the song of mountain birds and misty valley vistas.",
+      "subtitleHi": "सूर्योदय से पूर्व पक्षियों की चहचहाहट और धुंधली घाटियों के बीच जागता गांव।",
+      "contentEn": "Daily life in Tandiyun has always embodied a deep reverence for the surrounding nature. Days began at dawn with the preparation of fresh cow milk, tending to terraced crops of Mandua and Jhangora, and fetching sweet spring water. The evening sunset over the layered Garhwal ridges brought families together around warm hearths for slow-cooked Chainsoo and hot Mandua rotis.",
+      "contentHi": "टांडियूं का दैनिक जीवन सदैव प्रकृति के साथ सामंजस्य पर आधारित रहा है। प्रातःकाल ताजे पहाड़ी दूध का मंथन, सीढ़ीदार खेतों में निराई-गुड़ाई और शीतल जलस्रोतों से पानी लाना दैनिक दिनचर्या का हिस्सा था। शाम को चूल्हे के पास बैठकर गर्म चैंसू और मंडुआ की रोटी का स्वाद पूरे परिवार को एक सूत्र में बांधता था।"
+    },
+    {
+      "id": "diaspora-reflections",
+      "titleEn": "Memories Across Distances",
+      "titleHi": "दूर देशों में बसे प्रवासियों की स्मृतियां",
+      "subtitleEn": "Keeping the umbilical connection alive from Delhi, Mumbai, and across the globe.",
+      "subtitleHi": "देश और दुनिया के कोनों से अपनी पैतृक माटी से अटूट जुड़ाव।",
+      "contentEn": "Hundreds of individuals whose families originated in Tandiyun now live and work in cities across India and internationally. Yet, whether visiting for summer vacations, family pujas, or sharing village photographs online, the bond with the ancestral soil remains unbreakable. The uphill climb from Bidaliya Niwaas to Tandiyun remains an emotional pilgrimage homeward.",
+      "contentHi": "टांडियूं से निकले सैकड़ों परिवार आज दिल्ली, मुंबई और विदेशों में कार्यरत हैं। परंतु जब भी छुट्टियों या कुलपूजा पर वे गांव आते हैं, तो बिडालिया निवास से गांव की ओर चढ़ते ही मन अपनी जड़ों के सुकून से भर जाता है। यह वेबसाइट उन सभी के लिए एक डिजिटल घर है।"
+    }
+  ]
+}

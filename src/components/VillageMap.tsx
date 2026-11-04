@@ -105,7 +105,7 @@ export const VillageMap: React.FC = () => {
       const markerTandiyun = L.marker(tandiyunCoords, { icon: tandiyunIcon }).addTo(map);
       markerTandiyun.bindPopup(`
         <div style="font-family: inherit; font-size: 13px; line-height: 1.4;">
-          <strong style="color: #D8E1D4; font-size: 14px;">Tandiyun Village (तंडियूं)</strong><br/>
+          <strong style="color: #D8E1D4; font-size: 14px;">Tandiyun Village (टांडियूं)</strong><br/>
           <span style="font-size: 11px; color: #D8E1D4;">Hillside settlement above the motor road. Walk uphill from Bidaliya Niwaas.</span><br/>
           <div style="margin-top: 6px; font-size: 11px; font-family: monospace;">
             30.001952° N, 78.834910° E

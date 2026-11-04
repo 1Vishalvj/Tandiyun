@@ -13,7 +13,6 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
   const { t } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [videoLoaded, setVideoLoaded] = useState(false);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -41,14 +40,14 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
   };
 
   const scrollToWelcome = () => {
-    const target = document.querySelector('#about');
+    const target = document.querySelector('#welcome-section');
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
-    <section id="home" className="relative w-full h-screen overflow-hidden bg-forest-dark flex items-center justify-center">
+    <section className="relative w-full h-screen overflow-hidden bg-deepGreen-dark flex items-center justify-center">
       {/* Background Video with Poster Fallback */}
       <video
         ref={videoRef}
@@ -58,7 +57,6 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
         playsInline
         preload="auto"
         poster="/assets/videos/hero-poster.webp"
-        onLoadedData={() => setVideoLoaded(true)}
         className="absolute inset-0 w-full h-full object-cover object-center z-0 transition-opacity duration-1000 scale-105"
       >
         <source src="/assets/videos/tandiyun-cinematic.mp4" type="video/mp4" />
@@ -72,7 +70,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
       {/* Hero Content */}
       <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center pt-16">
         {/* Mountain Icon / Top Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-mist/20 bg-forest/40 backdrop-blur-md mb-6 animate-fade-in shadow-lg">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-mist/20 bg-deepGreen/60 backdrop-blur-md mb-6 animate-fade-in shadow-lg">
           <Mountain className="w-3.5 h-3.5 text-earth-light" />
           <span className="font-devanagari text-sm sm:text-base text-mist/95 tracking-wide">
             {t.hero.kicker}
@@ -80,20 +78,23 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
         </div>
 
         {/* Village Title */}
-        <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-[0.25em] text-ivory uppercase leading-none drop-shadow-2xl mb-4">
+        <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-[0.22em] text-ivory uppercase leading-none drop-shadow-2xl mb-3">
           {t.hero.title}
         </h1>
 
+        {/* Hindi Village Subtitle with exact spelling टांडियूं */}
+        <div className="font-devanagari text-xl sm:text-2xl md:text-3xl text-mist/90 mb-4 tracking-widest font-normal drop-shadow">
+          टांडियूं
+        </div>
+
         {/* English Tagline */}
-        <p className="font-serif italic text-base sm:text-xl md:text-2xl text-mist/90 tracking-[0.15em] uppercase font-light max-w-3xl mb-8 drop-shadow-md">
+        <p className="font-serif italic text-sm sm:text-lg md:text-xl text-ivory/85 tracking-[0.16em] uppercase font-light max-w-3xl mb-8 drop-shadow-md">
           {t.hero.tagline}
         </p>
 
         {/* Geographical Coordinates Badge */}
-        <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm text-mist/75 font-mono mb-10 bg-forest-dark/50 px-4 py-2 rounded-lg border border-mist/10 backdrop-blur-sm">
-          <span>Lat: 30.001952° N</span>
-          <span className="text-earth">•</span>
-          <span>Long: 78.834910° E</span>
+        <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm text-mist/80 font-mono mb-10 bg-deepGreen-dark/70 px-4 py-2 rounded-xl border border-mist/15 backdrop-blur-sm">
+          <span>Bidaliya Niwaas: 30.002638° N, 78.833203° E</span>
           <span className="text-earth">•</span>
           <span>Pauri Garhwal, Uttarakhand</span>
         </div>
@@ -112,7 +113,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
           <div className="flex items-center gap-2">
             <button
               onClick={toggleSound}
-              className="inline-flex items-center gap-2 px-4 py-3.5 rounded-full bg-forest-dark/70 hover:bg-forest/80 border border-mist/20 text-ivory text-xs sm:text-sm font-medium backdrop-blur-md transition-all"
+              className="inline-flex items-center gap-2 px-4 py-3.5 rounded-full bg-deepGreen/70 hover:bg-forest border border-mist/20 text-ivory text-xs sm:text-sm font-medium backdrop-blur-md transition-all"
               title={isMuted ? t.hero.soundToggleUnmute : t.hero.soundToggleMute}
             >
               {isMuted ? (
@@ -130,7 +131,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
 
             <button
               onClick={togglePlay}
-              className="p-3.5 rounded-full bg-forest-dark/70 hover:bg-forest/80 border border-mist/20 text-ivory backdrop-blur-md transition-all"
+              className="p-3.5 rounded-full bg-deepGreen/70 hover:bg-forest border border-mist/20 text-ivory backdrop-blur-md transition-all"
               title={isPlaying ? t.hero.pauseVideo : t.hero.playVideo}
               aria-label={isPlaying ? 'Pause' : 'Play'}
             >
@@ -153,4 +154,3 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
     </section>
   );
 };
-

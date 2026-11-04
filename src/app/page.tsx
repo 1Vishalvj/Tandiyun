@@ -9,6 +9,7 @@ import { ExploreSection } from '@/components/ExploreSection';
 import { LandscapeGallery } from '@/components/LandscapeGallery';
 import { SpiritualPlaces } from '@/components/SpiritualPlaces';
 import { CultureSection } from '@/components/CultureSection';
+import { MemoriesSection } from '@/components/MemoriesSection';
 import { CommunitySection } from '@/components/CommunitySection';
 import { Footer } from '@/components/Footer';
 
@@ -25,20 +26,20 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen bg-forest-dark flex flex-col">
+    <main className="min-h-screen bg-deepGreen-dark flex flex-col">
       {/* Navigation */}
       <Navbar
         isMuted={isMuted}
         onToggleSound={() => setIsMuted((prev) => !prev)}
       />
 
-      {/* Section 1: Hero Video */}
+      {/* Section 1: Full-Screen Cinematic Hero */}
       <HeroVideo
         isMuted={isMuted}
         setIsMuted={setIsMuted}
       />
 
-      {/* Section 2: Welcome to Tandiyun */}
+      {/* Section 2: Welcome to Tandiyun (60% Photo / 40% Editorial) */}
       <WelcomeSection />
 
       {/* Section 3: Discover Our Landscape */}
@@ -47,19 +48,22 @@ export default function HomePage() {
       {/* Section 4: Explore Tandiyun in 3D & Maps */}
       <ExploreSection />
 
-      {/* Section 5: Photo Gallery & Lightbox */}
+      {/* Section 5: Spiritual Heritage ("Faith That Connects Us") */}
+      <SpiritualPlaces limit={3} showAllCta={true} />
+
+      {/* Section 6: Culture & Traditions */}
+      <CultureSection />
+
+      {/* Section 7: Memories of Tandiyun */}
+      <MemoriesSection />
+
+      {/* Photography Archive & Lightbox Section */}
       <LandscapeGallery
         selectedPhotoId={selectedPhotoId}
         onClearSelectedPhoto={() => setSelectedPhotoId(null)}
       />
 
-      {/* Section 6: Spiritual Places */}
-      <SpiritualPlaces />
-
-      {/* Section 7: Culture & Traditions */}
-      <CultureSection />
-
-      {/* Section 8: Community */}
+      {/* Section 8: Community ("Our Village. Our People. Our Stories.") */}
       <CommunitySection />
 
       {/* Section 9: Footer */}
@@ -67,4 +71,3 @@ export default function HomePage() {
     </main>
   );
 }
-

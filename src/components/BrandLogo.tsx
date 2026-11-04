@@ -15,7 +15,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 }) => {
   return (
     <Link
-      href="#home"
+      href="/"
       className={`group inline-flex items-center gap-3 transition-opacity duration-300 hover:opacity-95 ${className}`}
       aria-label="Tandiyun Home"
     >
@@ -62,20 +62,19 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       {/* Brand Text */}
       <div className="flex flex-col text-left">
         <div className="flex items-baseline gap-2">
-          <span className="font-heading tracking-[0.25em] text-xl font-bold text-ivory uppercase">
+          <span className="font-heading tracking-[0.22em] text-xl font-bold text-ivory uppercase">
             TANDIYUN
           </span>
-          <span className="font-devanagari text-xs text-mist/75 font-normal tracking-wide">
-            तंडियूं
+          <span className="font-devanagari text-xs text-mist/85 font-medium tracking-wide">
+            टांडियूं
           </span>
         </div>
         {showTagline && (
           <span className="text-[10px] uppercase tracking-[0.2em] text-earth-light font-medium">
-            Garhwal • Uttarakhand
+            Pauri Garhwal • Uttarakhand
           </span>
         )}
       </div>
     </Link>
   );
 };
-

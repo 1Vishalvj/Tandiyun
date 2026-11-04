@@ -12,12 +12,18 @@ module.exports = {
       colors: {
         forest: {
           DEFAULT: '#183C32',
-          dark: '#102A23',
+          dark: '#0F2922',
           light: '#235245',
         },
         deepGreen: {
-          DEFAULT: '#243D32',
-          dark: '#1B2F26',
+          DEFAULT: '#0F2922',
+          dark: '#0A1C17',
+          surface: '#13352C',
+        },
+        charcoal: {
+          DEFAULT: '#171B19',
+          light: '#222825',
+          dark: '#111413',
         },
         mist: {
           DEFAULT: '#D8E1D4',
@@ -28,6 +34,7 @@ module.exports = {
           DEFAULT: '#EDE5D5',
           light: '#F8F5EE',
           dark: '#DDD0B9',
+          warm: '#F4EFE6',
         },
         earth: {
           DEFAULT: '#A66F43',
@@ -41,16 +48,17 @@ module.exports = {
         sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'cinematic': '0 20px 50px rgba(16, 42, 35, 0.45)',
-        'glow': '0 0 25px rgba(216, 225, 212, 0.25)',
+        'cinematic': '0 25px 60px -15px rgba(10, 28, 23, 0.65)',
+        'glow': '0 0 35px rgba(216, 225, 212, 0.2)',
+        'earth': '0 10px 30px -10px rgba(166, 111, 67, 0.4)',
       },
       animation: {
-        'fade-in': 'fadeIn 1s ease-in-out forwards',
+        'fade-in': 'fadeIn 0.8s ease-in-out forwards',
         'float-slow': 'floatSlow 8s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         floatSlow: {
@@ -62,4 +70,3 @@ module.exports = {
   },
   plugins: [],
 };
-

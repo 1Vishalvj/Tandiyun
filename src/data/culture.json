@@ -2,30 +2,25 @@
   "festivals": [
     {
       "id": "phooldei",
-      "nameEn": "Phooldei (The Spring Flower Festival)",
-      "nameHi": "फूलदेई (वसंत ऋतु का पुष्प पर्व)",
-      "seasonEn": "First day of Chaitra (March - April)",
-      "seasonHi": "चैत्र मास का पहला दिन (मार्च - अप्रैल)",
-      "descriptionEn": "Young children collect early spring mountain flowers (Buransh, Peeli Sarson, Pyaunli) and place them on the doorsteps of village homes, singing traditional blessings of prosperity and happiness.",
-      "descriptionHi": "छोटे बच्चे जंगलों से बुरांश, प्योंली और आड़ू के फूल लाकर घरों की देहरी पर सजाते हैं और 'फूल देई, छम्मा देई' गाकर गांव में सुख-समृद्धि की मंगलकामना करते हैं।"
-    },
-    {
-      "id": "igas-bagwal",
-      "nameEn": "Igas Bagwal (Garhwal's Deepawali)",
-      "nameHi": "इगास बग्वाल (गढ़वाल की लोक दीपावली)",
-      "seasonEn": "11 days after Kartik Diwali",
-      "seasonHi": "कार्तिक दीपावली के 11 दिन बाद",
-      "descriptionEn": "A joyous mountain festival celebrated with Bhailo (torches of dry pine/bhimla wood swung rhythmically to mountain rhythms), traditional folk dances, and sharing of homemade delicacies.",
-      "descriptionHi": "पहाड़ों की पारम्परिक दीपावली, जिसमें भीमल की लकड़ी के 'भैलो' जलाकर घुमाए जाते हैं, ढोल-दमाऊं की थाप पर लोकनृत्य होते हैं और विशेष पकवान बनते हैं।"
+      "nameEn": "Phool Dei (The Spring Flower Festival)",
+      "nameHi": "फूलदेई (वसंत पुष्प उत्सव)",
+      "seasonEn": "First day of Chaitra (March)",
+      "seasonHi": "चैत्र संक्रांति (मार्च)",
+      "category": "Seasonal Blessing",
+      "scope": "Celebrated across Garhwal including टांडियूं",
+      "descriptionEn": "Young children collect early spring mountain blossoms (Buransh, Pyaunli, mustard) and place them upon the doorsteps of village homes, singing traditional blessings of prosperity, happiness, and abundant health.",
+      "descriptionHi": "छोटे बच्चे पहाड़ों से बुरांश, प्योंली और आड़ू के ताजे फूल चुनकर घरों की देहरी पर सजाते हैं और 'फूल देई, छम्मा देई, देली सौं भरि भकार' गाकर सुख-समृद्धि की मंगलकामना करते हैं।"
     },
     {
       "id": "harela",
-      "nameEn": "Harela (Greenery & Monsoon Blessing)",
-      "nameHi": "हरेला (हरियाली और मानसून का पावन पर्व)",
-      "seasonEn": "Shravan Sankranti (July)",
-      "seasonHi": "सावन संक्रांति (जुलाई)",
-      "descriptionEn": "Seeds of multiple grains (wheat, barley, mustard) are sown in small baskets in village homes and harvested as green shoots on the 10th day, placed on family members' ears as a prayer for abundant crops and nature's harmony.",
-      "descriptionHi": "पांच या सात अनाजों को घर के मंदिर में बोया जाता है। दसवें दिन अंकुरित हरेला काटकर बड़ों का आशीर्वाद लिया जाता है और प्रकृति के प्रति कृतज्ञता प्रकट की जाती है।"
+      "nameEn": "Harela (Monsoon Greenery & Nature's Blessing)",
+      "nameHi": "हरेला (हरियाली और प्रकृति का पावन पर्व)",
+      "seasonEn": "Kark Sankranti / Shravan (July)",
+      "seasonHi": "श्रावण संक्रांति (जुलाई)",
+      "category": "Agricultural Reverence",
+      "scope": "Celebrated across Uttarakhand",
+      "descriptionEn": "Seven sacred grains are sown in woven bamboo baskets inside family shrines nine days prior. The tender green shoots (Harela) are harvested on the festival day and placed behind the ears of family members as a blessing of longevity and nature's harmony.",
+      "descriptionHi": "सप्तधान्य घर के देवस्थान पर बोए जाते हैं। दसवें दिन अंकुरित हरेला काटकर बड़ों के कानों में लगाकर आशीर्वाद लिया जाता है और प्रकृति के प्रति कृतज्ञता प्रकट की जाती है।"
     },
     {
       "id": "ghee-sankranti",
@@ -33,70 +28,158 @@
       "nameHi": "घी संक्रांति (ओलगिया)",
       "seasonEn": "Bhadrapada Sankranti (August)",
       "seasonHi": "भाद्रपद संक्रांति (अगस्त)",
-      "descriptionEn": "Celebrates the ripening of monsoon crops and abundant cattle milk. Families feast on ghee, stuffed urad dal rotis (Bedi), and sweet Arsa, symbolizing vitality and health.",
-      "descriptionHi": "फसलों के लहलहाने और दुग्ध उत्पादन की संपन्नता का उत्सव। इस दिन बेडू की रोटी, घी और खीर खाने की परंपरा है।"
+      "category": "Harvest Abundance",
+      "scope": "Traditional Garhwali Observance",
+      "descriptionEn": "Celebrates the ripening of monsoon crops and abundant cattle grazing. Families feast on home-churned cow ghee, stuffed urad dal flatbreads (Bedi), and sweet Arsa, symbolizing health, vitality, and gratitude for cattle wealth.",
+      "descriptionHi": "फसलों में बालियां आने और दुग्ध उत्पादन की संपन्नता का उत्सव। इस दिन बेडू की रोटी, घी और खीर खाने की प्राचीन परंपरा है।"
+    },
+    {
+      "id": "igas-bagwal",
+      "nameEn": "Igas Bagwal (Garhwal's Traditional Deepawali)",
+      "nameHi": "इगास बग्वाल (गढ़वाल की पारंपरिक दीपावली)",
+      "seasonEn": "11 days after Kartik Diwali",
+      "seasonHi": "कार्तिक दीपावली के 11 दिन बाद",
+      "category": "Folk Celebration",
+      "scope": "Celebrated across Garhwal hills",
+      "descriptionEn": "Celebrated with 'Bhailo'—ropes of dried mountain pine and bhimla wood swung rhythmically in blazing circles to folk songs, commemorating the safe return of brave warrior Madho Singh Bhandari to the Garhwal hills.",
+      "descriptionHi": "पहाड़ों की अपनी अनूठी दीपावली, जिसमें भीमल की लकड़ी से बने 'भैलो' जलाकर घुमाए जाते हैं, ढोल-दमाऊं की गूंज पर लोकनृत्य होते हैं और विशेष पहाड़ी पकवान बनते हैं।"
+    },
+    {
+      "id": "makar-sankranti",
+      "nameEn": "Makar Sankranti (Ghughutiya)",
+      "nameHi": "मकर संक्रांति (घुघुती / उत्तरायणी)",
+      "seasonEn": "Magh Sankranti (Mid-January)",
+      "seasonHi": "माघ संक्रांति (मध्य जनवरी)",
+      "category": "Seasonal Transition",
+      "scope": "Celebrated across mountain valleys",
+      "descriptionEn": "Deep-fried dough ornaments called Ghughute (twisted like mountain doves) are prepared from wheat flour and jaggery syrup. Children string them into edible garlands and call crows and migratory birds from the pine ridges.",
+      "descriptionHi": "गुड़ और आटे से घुघुते (पक्षीनुमा पकवान) बनाकर बच्चों के गले में माला पहनाई जाती है। बच्चे 'काले कौवा काले, घुघुती माला खा ले' गाकर प्रवासी पक्षियों को बुलाते हैं।"
+    },
+    {
+      "id": "himalayan-holi",
+      "nameEn": "Baithaki & Khadi Holi",
+      "nameHi": "बैठकी एवं खड़ी होली",
+      "seasonEn": "Phalguna (March)",
+      "seasonHi": "फाल्गुन पूर्णिमा (मार्च)",
+      "category": "Classical & Folk Music",
+      "scope": "Traditional Garhwali musical tradition",
+      "descriptionEn": "Villagers gather in village courtyards for classical raga-based musical singing (Baithaki Holi) and circular energetic dancing with traditional hurka and dholak (Khadi Holi), celebrating brotherhood and the end of cold mountain winters.",
+      "descriptionHi": "गांव के आंगनों में शास्त्रीय रागों पर आधारित बैठकी होली और ढोलक-हुड़के की थाप पर सामूहिक खड़ी होली गाई जाती है, जो भाईचारे और उल्लास का प्रतीक है।"
+    },
+    {
+      "id": "diwali",
+      "nameEn": "Diwali & Bagwal",
+      "nameHi": "दीपावली एवं बग्वाल",
+      "seasonEn": "Kartik Amavasya (October - November)",
+      "seasonHi": "कार्तिक अमावस्या",
+      "category": "Festival of Light",
+      "scope": "Celebrated across all homes",
+      "descriptionEn": "Mountain stone houses are cleaned and adorned with clay lamps (diyas) and traditional flour rangolis (Aipan). Families prepare traditional sweets such as Arsa and Rotana.",
+      "descriptionHi": "मिट्टी के दीयों से पत्थर के घरों और देहरियों को सजाया जाता है। पारम्परिक ऐंपण कला और मीठे अरसे व रोटाना बनाकर उत्सव मनाया जाता है।"
     }
   ],
   "food": [
     {
-      "id": "mandua-roti",
-      "nameEn": "Koda / Mandua Roti",
-      "nameHi": "कोदा / मंडुआ की रोटी",
-      "ingredientsEn": "Finger millet flour, pure cow ghee",
-      "ingredientsHi": "मंडुआ का आटा, शुद्ध पहाड़ी घी",
-      "descriptionEn": "Nutritious, warm, and mineral-rich flatbread cultivated on the rain-fed terraces of Garhwal, traditionally eaten with home-churned ghee and jaggery.",
-      "descriptionHi": "गढ़वाल की सीढ़ीदार ढलानों पर उगने वाले मंडुआ (रागी) से बनी पौष्टिक रोटी, जिसे पारंपरिक रूप से मक्खन या घी के साथ परोसा जाता है।"
+      "id": "kafuli",
+      "nameEn": "Kafuli",
+      "nameHi": "काफुली",
+      "ingredientsEn": "Wild mountain greens, spinach, fenugreek, rice paste, iron pot",
+      "ingredientsHi": "पालक, मेथी, राय, चावल का आलन, जख्या तड़का",
+      "descriptionEn": "A velvety, iron-rich mountain preparation made from fresh wild spinach and fenugreek leaves slow-simmered in an iron griddle (kadhai), thickened with local rice batter, and tempered with aromatic wild jakhiya seeds.",
+      "descriptionHi": "लोहे की कड़ाही में घोटकर पकाई जाने वाली हरी पत्तियों की पौष्टिक डिश, जिसे चावल के आलन और जख्या के छौंक से तैयार किया जाता है।"
+    },
+    {
+      "id": "phaanu",
+      "nameEn": "Phaanu",
+      "nameHi": "फाणू",
+      "ingredientsEn": "Gahat (Kulath) or Urad lentils, mountain spices, ghee",
+      "ingredientsHi": "गहत या उड़द की दाल, पहाड़ी मसाले, शुद्ध घी",
+      "descriptionEn": "A nourishing lentil delicacy prepared by soaking Gahat or Black Urad overnight, grinding it into a fine batter on stone silbattas, and gently cooking into small soufflé-like dumplings in a rich spiced broth.",
+      "descriptionHi": "गहत या उड़द की दाल को भिगोकर सिलबट्टे पर पीसकर बनाई जाने वाली गाढ़ी और पौष्टिक दाल, जो सर्दियों में शरीर को गर्माहट देती है।"
     },
     {
       "id": "chainsoo",
       "nameEn": "Chainsoo",
       "nameHi": "चैंसू",
-      "ingredientsEn": "Roasted black gram (Urad dal), garlic, coriander, jakhiya",
-      "ingredientsHi": "भुनी हुई उड़द दाल, लहसुन, धनिया, जख्या तड़का",
-      "descriptionEn": "A protein-rich stew prepared by roasting whole black gram on an iron griddle, grinding it coarsely on a stone silbatta, and slow-cooking in an iron pot with wild mountain jakhiya tempering.",
-      "descriptionHi": "लोहे की कड़ाही में भुनी उड़द की दाल को सिलबट्टे पर पीसकर धीमी आंच पर पकाया जाने वाला स्वादिष्ट और पौष्टिक गाढ़ा सूप।"
-    },
-    {
-      "id": "kafuli",
-      "nameEn": "Kafuli",
-      "nameHi": "काफुली",
-      "ingredientsEn": "Fresh spinach, fenugreek greens, rice paste, iron wok",
-      "ingredientsHi": "पालक, मेथी की पत्तियां, चावल का आलन, जख्या",
-      "descriptionEn": "A velvety green delicacy prepared from wild and garden greens cooked slowly in an iron vessel and thickened with rice batter, aromatic with jakhiya seeds.",
-      "descriptionHi": "पहाड़ी हरी पत्तियों (पालक और मेथी) को घोटकर तैयार किया जाने वाला अत्यंत स्वास्थ्यवर्धक व्यंजन जो चावल के साथ खाया जाता है।"
+      "ingredientsEn": "Slow-roasted black gram (Urad), garlic, coriander, iron wok",
+      "ingredientsHi": "भुनी हुई काली उड़द दाल, लहसुन, धनिया, जख्या",
+      "descriptionEn": "An iconic Garhwali protein stew. Whole black gram is dry-roasted on an iron griddle until fragrant, coarsely pounded, and simmered slowly over wood fire with garlic, coriander, and jakhiya.",
+      "descriptionHi": "लोहे के तवे पर भुनी उड़द को दरदरा पीसकर पकाया जाने वाला अत्यंत स्वादिष्ट और पौष्टिक गाढ़ा सूप, जिसे भात (चावल) के साथ खाया जाता है।"
     },
     {
       "id": "jhangora-kheer",
-      "nameEn": "Jhangora Kheer",
+      "nameEn": "Jhangora ki Kheer",
       "nameHi": "झंगोरा की खीर",
-      "ingredientsEn": "Barnyard millet, hill cow milk, cardamom, nuts",
-      "ingredientsHi": "पहाड़ी झंगोरा (बाड़यार्ड मिलेट), शुद्ध दूध, इलायची, मेवे",
-      "descriptionEn": "A delicate, aromatic sweet pudding made with high-altitude barnyard millet slow-simmered in thick creamy hill cow milk.",
-      "descriptionHi": "पहाड़ी झंगोरा और ताजे दूध से बनी पारंपरिक खीर, जो स्वाद और स्वास्थ्य का अप्रतिम संगम है।"
+      "ingredientsEn": "Barnyard millet (Jhangora), hill cow milk, cardamom, almonds",
+      "ingredientsHi": "पहाड़ी झंगोरा (बाड़यार्ड मिलेट), ताज़ा पहाड़ी दूध, इलायची, मेवे",
+      "descriptionEn": "A delicate, silky sweet pudding prepared using high-altitude barnyard millet (Jhangora) slow-cooked in thick pure hill cow milk and delicately scented with mountain cardamom.",
+      "descriptionHi": "उत्तराखंड के ऊंचाई वाले खेतों में उगने वाले झंगोरा और शुद्ध पहाड़ी गाय के दूध से बनी सुस्वादु पारंपरिक खीर।"
+    },
+    {
+      "id": "mandua-roti",
+      "nameEn": "Mandua / Koda Roti",
+      "nameHi": "मंडुआ (कोदा) की रोटी",
+      "ingredientsEn": "Finger millet flour, pure cow ghee, wild honey",
+      "ingredientsHi": "मंडुआ का आटा, शुद्ध पहाड़ी घी, गुड़",
+      "descriptionEn": "Warm, earthy, and mineral-dense flatbread made from finger millet grown on rain-fed terraced hills. Traditionally served hot smeared with golden cow ghee and mountain jaggery.",
+      "descriptionHi": "पहाड़ों के सीढ़ीदार खेतों में उपजाए गए मंडुआ से बनी पौष्टिक रोटी, जिसे पारंपरिक रूप से शुद्ध मक्खन या घी के साथ खाया जाता है।"
+    },
+    {
+      "id": "gahat-dal",
+      "nameEn": "Gahat (Kulath) Dal",
+      "nameHi": "गहत (कुल्थी) की दाल",
+      "ingredientsEn": "Horse gram, mountain herbs, jakhiya, ghee",
+      "ingredientsHi": "गहत की दाल, हींग, जख्या, पहाड़ी मसाले",
+      "descriptionEn": "Ancient therapeutic horse gram dal celebrated for its medicinal qualities against kidney stones and winter chills, cooked slowly in earthenware or iron pots.",
+      "descriptionHi": "औषधीय गुणों से भरपूर गहत की दाल, जो पहाड़ी सर्दियों में ऊर्जा और स्वास्थ्य का वरदान मानी जाती है।"
+    },
+    {
+      "id": "arsa",
+      "nameEn": "Arsa & Rotana",
+      "nameHi": "अरसा एवं रोटाना",
+      "ingredientsEn": "Red hill rice flour, jaggery syrup, mustard oil",
+      "ingredientsHi": "पहाड़ी चावल का आटा, गुड़ की चाशनी, सरसों का तेल",
+      "descriptionEn": "The quintessential ceremonial sweet of Garhwal weddings and auspicious village gatherings, hand-flattened into discs and deep-fried to golden amber perfection.",
+      "descriptionHi": "गढ़वाल के मांगलिक कार्यों और विवाह का सबसे पूजनीय पारंपरिक मिष्ठान, जो चावल के आटे और गुड़ की चाशनी से बनता है।"
+    },
+    {
+      "id": "badi",
+      "nameEn": "Urad ki Badi",
+      "nameHi": "उड़द की बड़ी",
+      "ingredientsEn": "Sun-dried spiced lentil and petha nuggets",
+      "ingredientsHi": "उड़द दाल, ककड़ी या पेठा, मसाले",
+      "descriptionEn": "Hand-shaped, sun-cured lentil nuggets prepared in early winter and preserved to enrich potato, tomato, and green curries throughout the mountain year.",
+      "descriptionHi": "धूप में सुखाई गई उड़द की मसालेदार बड़ियां, जो पहाड़ी कढ़ी और आलू की रसेदार सब्जी में अद्वितीय स्वाद जोड़ती हैं।"
     }
   ],
-  "traditions": [
+  "customs": [
     {
-      "id": "gram-devta",
-      "nameEn": "Gram Devta & Sidh Baba Reverence",
-      "nameHi": "ग्राम देवता एवं सिद्ध बाबा आराधना",
-      "descriptionEn": "Every village in Garhwal has a protective guardian deity (Gram Devta) and local Sidh shrine where the community gathers for blessings before sowing, harvesting, and auspicious life ceremonies.",
-      "descriptionHi": "गांव के प्रत्येक मांगलिक कार्य, फसल की बुवाई और कटाई से पूर्व कुलदेवता, सिद्ध बाबा और ग्राम देवी का नमन कर सामूहिक आशीर्वाद प्राप्त किया जाता है।"
+      "id": "stone-architecture",
+      "nameEn": "Traditional Slate & Stone Architecture (Pakhana & Tiwari)",
+      "nameHi": "पारंपरिक पहाड़ी स्थापत्य (पाखणा एवं नक्काशीदार तिवारी)",
+      "descriptionEn": "Centuries-old masonry homes built from locally quarried stone blocks, joined with mud mortar, crowned by durable hand-chiseled slate roofs (pakhana), and adorned with carved wooden window galleries (tiwari). Designed naturally to insulate against freezing Himalayan winters and stay pleasantly cool in summer.",
+      "descriptionHi": "स्थानीय पत्थरों और हाथ से तराशी गई स्लेट (पाखणा) से निर्मित छतें, नक्काशीदार लकड़ी की तिवारी और खिड़कियां जो सर्दियों में गर्म और गर्मियों में सुखद ठंडक बनाए रखती हैं।"
     },
     {
-      "id": "himalayan-architecture",
-      "nameEn": "Traditional Garhwali Architecture",
-      "nameHi": "पारम्परिक पहाड़ी स्थापत्य (मकान एवं पाखणा)",
-      "descriptionEn": "Centuries-old stone masonry houses featuring locally cut slate roofs (pakhana), wooden carved balconies (tiwari), and thick stone walls designed to stay warm in cold mountain winters and cool in summer.",
-      "descriptionHi": "स्थानीय पत्थरों और स्लेट (पाखणा) से निर्मित छतें, नक्काशीदार लकड़ी की तिवारी और चौखटें जो सर्दियों में गर्म और गर्मियों में सुखद ठंडक बनाए रखती हैं।"
+      "id": "terraced-farming",
+      "nameEn": "Terraced Mountain Agriculture",
+      "nameHi": "सीढ़ीदार खेती एवं पारम्परिक कृषि",
+      "descriptionEn": "Ingenious stair-like farming carved into steep mountain slopes over generations, cultivating heritage rain-fed crops like Mandua, Jhangora, Gahat, Bhatt (black soybean), and Chaulai with natural organic methods.",
+      "descriptionHi": "पहाड़ी ढलानों पर पीढ़ियों से तराशे गए सीढ़ीदार खेत, जहां मंडुआ, झंगोरा, भट्ट और गहत जैसी औषधीय फसलें प्राकृतिक विधि से उगाई जाती हैं।"
     },
     {
-      "id": "geet-mangal",
-      "nameEn": "Mangal Geet & Folk Songs",
-      "nameHi": "मंगल गीत एवं लोक गाथाएं",
-      "descriptionEn": "Sacred ceremonial chants sung by village elders during weddings, festivals, and sacred rituals, preserving centuries of oral history, mountain wisdom, and ancestral memory.",
+      "id": "folk-music",
+      "nameEn": "Mangal Geet, Dhol-Damaau & Folk Songs",
+      "nameHi": "मंगल गीत, ढोल-दमाऊं एवं लोकगाथाएं",
+      "descriptionEn": "Sacred ceremonial oral chants sung by village elders during auspicious occasions, accompanied by the hypnotic rhythms of Dhol-Damaau and Ransingha instruments that resonate through the mountain valleys.",
       "descriptionHi": "विवाह एवं उत्सवों पर मातृशक्ति द्वारा गाए जाने वाले मांगलिक श्लोक व लोकगीत, जो गढ़वाल की मौखिक परंपरा और इतिहास को संजोए हुए हैं।"
+    },
+    {
+      "id": "village-deities",
+      "nameEn": "Gram Devta, Kula Devta & Sidh Reverence",
+      "nameHi": "ग्राम देवता, कुल देवता एवं सिद्ध पीठ आराधना",
+      "descriptionEn": "The sacred bond connecting each mountain hamlet with its guardian deities (Gram Devta) and local Sidh shrines, where families seek protective blessings before sowing crops, building homes, or embarking on journeys.",
+      "descriptionHi": "गांव के प्रत्येक मांगलिक कार्य, फसल की बुवाई और कटाई से पूर्व कुलदेवता, सिद्ध बाबा और ग्राम देवी का नमन कर सामूहिक आशीर्वाद प्राप्त किया जाता है।"
     }
   ]
 }
-

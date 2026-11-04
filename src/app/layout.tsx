@@ -4,12 +4,12 @@ import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tandiyun.in'),
-  title: 'TANDIYUN – Official Village Website | पहाड़ों में बसा एक छोटा सा संसार',
+  title: 'TANDIYUN (टांडियूं) – पहाड़ों में बसा एक छोटा सा संसार',
   description:
     'Official website and digital heritage archive for Tandiyun, a serene hill village in the Garhwal Himalayas of Uttarakhand, India. Featuring authentic landscape photography, 3D terrain exploration, regional temples, and living memories.',
   keywords: [
     'Tandiyun',
-    'तंडियूं',
+    'टांडियूं',
     'Bidaliya Niwaas',
     'Uttarakhand',
     'Garhwal',
@@ -21,10 +21,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Tandiyun Village Community' }],
   openGraph: {
-    title: 'TANDIYUN – पहाड़ों में बसा एक छोटा सा संसार',
+    title: 'TANDIYUN (टांडियूं) – पहाड़ों में बसा एक छोटा सा संसार',
     description: 'Our Roots. Our Mountains. Our Memories. Official digital sanctuary for Tandiyun village, Uttarakhand.',
     url: 'https://tandiyun.in',
-    siteName: 'Tandiyun Village',
+    siteName: 'Tandiyun (टांडियूं)',
     images: [
       {
         url: '/assets/photos/gallery/IMG_20200814_063519.webp',

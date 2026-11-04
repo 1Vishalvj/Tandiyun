@@ -40,7 +40,7 @@ export const CultureSection: React.FC = () => {
             }`}
           >
             <Calendar className="w-4 h-4" />
-            <span>{t.culture.tabs.festivals}</span>
+            <span>{t.culture.festivalsTab}</span>
           </button>
 
           <button
@@ -52,7 +52,7 @@ export const CultureSection: React.FC = () => {
             }`}
           >
             <Utensils className="w-4 h-4" />
-            <span>{t.culture.tabs.food}</span>
+            <span>{t.culture.cuisineTab}</span>
           </button>
 
           <button
@@ -64,7 +64,7 @@ export const CultureSection: React.FC = () => {
             }`}
           >
             <Home className="w-4 h-4" />
-            <span>{t.culture.tabs.traditions}</span>
+            <span>{t.culture.customsTab}</span>
           </button>
         </div>
 
@@ -121,7 +121,7 @@ export const CultureSection: React.FC = () => {
         {/* Tab 3: Customs & Traditions */}
         {activeTab === 'traditions' && (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
-            {cultureData.traditions.map((trad) => (
+            {cultureData.customs.map((trad) => (
               <div
                 key={trad.id}
                 className="rounded-2xl border border-mist/15 bg-forest-dark/80 p-7 shadow-xl hover:border-earth/50 transition-all flex flex-col justify-between"
@@ -146,7 +146,7 @@ export const CultureSection: React.FC = () => {
         <div className="mt-14 p-6 rounded-2xl bg-forest-dark/40 border border-mist/15 text-center max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-left">
             <h4 className="font-heading text-lg text-ivory font-semibold">
-              {language === 'hi' ? 'तंडियूं की विशिष्ट परंपराएं साझा करें' : 'Help Document Tandiyun’s Living Heritage'}
+              {language === 'hi' ? 'टांडियूं की विशिष्ट परंपराएं साझा करें' : 'Help Document Tandiyun’s Living Heritage'}
             </h4>
             <p className="text-xs text-mist/75 mt-0.5">
               {language === 'hi'

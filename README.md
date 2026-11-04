@@ -1,4 +1,4 @@
-# TANDIYUN (तंडियूं) – Official Village Website
+# TANDIYUN (टांडियूं) – Official Village Website
 
 > *"पहाड़ों में बसा एक छोटा सा संसार"*  
 > *"Our Roots. Our Mountains. Our Memories."*
