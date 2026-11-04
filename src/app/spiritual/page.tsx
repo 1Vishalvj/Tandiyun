@@ -75,7 +75,7 @@ export default function SpiritualPage() {
                 <tr className="hover:bg-forest/50 transition-colors">
                   <td className="py-3 px-4 sm:px-6 font-semibold text-ivory">Bunkhal Kalinka Devi Temple</td>
                   <td className="py-3 px-4 sm:px-6">Maa Kalinka / Kali</td>
-                  <td className="py-3 px-4 sm:px-6 text-right font-bold text-earth-light">50 Km</td>
+                  <td className="py-3 px-4 sm:px-6 text-right font-bold text-earth-light">50 Km (Provisional)</td>
                 </tr>
                 <tr className="hover:bg-forest/50 transition-colors">
                   <td className="py-3 px-4 sm:px-6 font-semibold text-ivory">Tarakund Mahadev</td>

@@ -54,16 +54,14 @@ export default function HomePage() {
       {/* Section 6: Culture & Traditions */}
       <CultureSection />
 
-      {/* Section 7: Memories of Tandiyun */}
-      <MemoriesSection />
-
-      {/* Photography Archive & Lightbox Section */}
+      {/* Section 7: Photography Archive & Lightbox Section */}
       <LandscapeGallery
         selectedPhotoId={selectedPhotoId}
         onClearSelectedPhoto={() => setSelectedPhotoId(null)}
       />
 
-      {/* Section 8: Community ("Our Village. Our People. Our Stories.") */}
+      {/* Section 8: Village Memories & Community */}
+      <MemoriesSection />
       <CommunitySection />
 
       {/* Section 9: Footer */}

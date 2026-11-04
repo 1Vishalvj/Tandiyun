@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
-import { X, ChevronLeft, ChevronRight, Calendar, Camera, ExternalLink, Download } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Calendar, Camera, Download } from 'lucide-react';
 
 export interface PhotoItem {
   id: string;
@@ -40,6 +40,8 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
   onPrev,
 }) => {
   const { language } = useLanguage();
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -65,21 +67,48 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
 
   const currentPhoto = photos[currentIndex];
 
+  // Mobile Touch Swipe Handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX === null || touchEndX === null) return;
+    const distance = touchStartX - touchEndX;
+    const minSwipeDistance = 45;
+    if (distance > minSwipeDistance) {
+      onNext(); // swipe left to view next
+    } else if (distance < -minSwipeDistance) {
+      onPrev(); // swipe right to view prev
+    }
+    setTouchStartX(null);
+    setTouchEndX(null);
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex flex-col bg-forest-dark/98 backdrop-blur-2xl animate-fade-in">
+    <div
+      className="fixed inset-0 z-50 flex flex-col bg-deepGreen-dark/98 backdrop-blur-2xl animate-fade-in select-none"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Photo Lightbox"
+    >
       {/* Top Bar */}
-      <div className="relative z-10 flex items-center justify-between px-4 sm:px-8 py-4 border-b border-mist/10 bg-forest/40">
-        <div className="flex items-center gap-3">
-          <span className="font-heading text-lg text-ivory tracking-wider">
+      <div className="relative z-10 flex items-center justify-between px-3 sm:px-8 py-3 sm:py-4 border-b border-mist/10 bg-forest/40">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <span className="font-heading text-sm sm:text-lg text-ivory tracking-wider truncate">
             TANDIYUN ARCHIVE
           </span>
           <span className="text-mist/40">•</span>
-          <span className="text-xs font-mono text-mist/80">
+          <span className="text-xs font-mono text-earth-light shrink-0">
             {currentIndex + 1} / {photos.length}
           </span>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <a
             href={currentPhoto.src}
             target="_blank"
@@ -88,39 +117,45 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
             title="View original uncompressed photo"
           >
             <Download className="w-3.5 h-3.5 text-earth-light" />
-            <span>Original RAW</span>
+            <span>Original</span>
           </a>
 
+          {/* Accessible Close Button (Min 44x44px Touch Target) */}
           <button
             onClick={onClose}
-            className="p-2 rounded-full bg-forest-light/30 hover:bg-forest text-ivory transition-colors"
+            className="flex items-center justify-center min-w-[44px] min-h-[44px] p-2 rounded-full bg-forest-light/40 hover:bg-forest text-ivory transition-colors active:scale-95"
             aria-label="Close Lightbox"
           >
-            <X className="w-6 h-6" />
+            <X className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
       </div>
 
-      {/* Main Image Stage */}
-      <div className="relative flex-1 flex items-center justify-center p-4 sm:p-8 overflow-hidden select-none">
-        {/* Previous Button */}
+      {/* Main Image Stage with Swipe Gestures */}
+      <div
+        className="relative flex-1 flex items-center justify-center p-2 sm:p-6 overflow-hidden touch-pan-y"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        {/* Previous Button (Hidden on very small mobile to prioritize photo view, accessible via swipe) */}
         <button
           onClick={onPrev}
-          className="absolute left-2 sm:left-6 z-20 p-3 rounded-full bg-forest-dark/70 hover:bg-forest text-ivory border border-mist/20 backdrop-blur-md transition-all hover:scale-105"
+          className="absolute left-2 sm:left-6 z-20 flex items-center justify-center min-w-[44px] min-h-[44px] p-2 rounded-full bg-deepGreen-dark/75 hover:bg-forest text-ivory border border-mist/20 backdrop-blur-md transition-all active:scale-95"
           aria-label="Previous Photo"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
 
         {/* Current Photo Frame */}
-        <div className="relative max-w-5xl max-h-[72vh] w-full h-full flex items-center justify-center">
+        <div className="relative max-w-5xl max-h-[65vh] sm:max-h-[72vh] w-full h-full flex items-center justify-center">
           <div className="relative w-full h-full">
             <Image
               src={currentPhoto.webpSrc}
               alt={language === 'hi' ? currentPhoto.titleHi : currentPhoto.titleEn}
               fill
               className="object-contain"
-              sizes="90vw"
+              sizes="(max-width: 768px) 100vw, 90vw"
               priority
             />
           </div>
@@ -129,41 +164,46 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
         {/* Next Button */}
         <button
           onClick={onNext}
-          className="absolute right-2 sm:right-6 z-20 p-3 rounded-full bg-forest-dark/70 hover:bg-forest text-ivory border border-mist/20 backdrop-blur-md transition-all hover:scale-105"
+          className="absolute right-2 sm:right-6 z-20 flex items-center justify-center min-w-[44px] min-h-[44px] p-2 rounded-full bg-deepGreen-dark/75 hover:bg-forest text-ivory border border-mist/20 backdrop-blur-md transition-all active:scale-95"
           aria-label="Next Photo"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
+
+        {/* Swipe Hint Pill for Mobile */}
+        <div className="sm:hidden absolute top-3 left-1/2 -translate-x-1/2 pointer-events-none px-3 py-1 rounded-full bg-black/60 text-[10px] font-mono text-mist/70">
+          Swipe left / right to navigate
+        </div>
       </div>
 
       {/* Bottom Caption & Metadata Bar */}
-      <div className="relative z-10 px-4 sm:px-8 py-5 border-t border-mist/10 bg-forest-dark/95">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="relative z-10 px-4 sm:px-8 py-3 sm:py-5 border-t border-mist/10 bg-deepGreen-dark/95 max-h-[30vh] overflow-y-auto">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-3 sm:gap-4">
           <div>
-            <div className="flex flex-wrap items-center gap-2 mb-1.5">
+            <div className="flex flex-wrap items-center gap-1.5 mb-1">
               {currentPhoto.categories.map((cat) => (
                 <span
                   key={cat}
-                  className="px-2.5 py-0.5 rounded-full bg-forest text-[11px] font-mono text-earth-light border border-mist/10"
+                  className="px-2 py-0.5 rounded-full bg-forest text-[10px] sm:text-[11px] font-mono text-earth-light border border-mist/10"
                 >
                   {cat}
                 </span>
               ))}
             </div>
-            <h3 className="font-heading text-xl sm:text-2xl text-ivory font-semibold">
+            <h3 className="font-heading text-lg sm:text-2xl text-ivory font-semibold">
               {language === 'hi' ? currentPhoto.titleHi : currentPhoto.titleEn}
             </h3>
-            <p className="text-sm text-mist/85 mt-1 font-serif italic">
+            <p className="text-xs sm:text-sm text-mist/85 mt-0.5 sm:mt-1 font-serif italic">
               {language === 'hi' ? currentPhoto.captionHi : currentPhoto.captionEn}
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-mist/70 shrink-0">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-[11px] sm:text-xs font-mono text-mist/70 shrink-0">
             <div className="flex items-center gap-1.5">
               <Calendar className="w-3.5 h-3.5 text-earth-light" />
-              <span>{currentPhoto.capturedAt}</span>
+              <span>{currentPhoto.capturedAt.split(' ')[0]}</span>
             </div>
-            <div className="flex items-center gap-1.5">
+            <div className="hidden xs:flex items-center gap-1.5">
               <Camera className="w-3.5 h-3.5 text-earth-light" />
               <span>{currentPhoto.width} × {currentPhoto.height} px</span>
             </div>
@@ -173,4 +213,3 @@ export const ImageLightbox: React.FC<ImageLightboxProps> = ({
     </div>
   );
 };
-

@@ -9,7 +9,10 @@
     "descriptionHi": "गढ़वाल का प्रसिद्ध शक्तिपीठ जो नयार नदी के उत्तरी तट पर स्थित है। यह मंदिर एक महत्वपूर्ण तीर्थ स्थल है जहां विशेष रूप से नवरात्रि के दौरान श्रद्धालुओं का तांता लगा रहता है।",
     "roadDistance": "14 km",
     "walkingInfo": "Direct road access with paved descent to the riverbank shrine.",
-    "festivals": ["Chaitra Navratri", "Sharad Navratri"],
+    "festivals": [
+      "Chaitra Navratri",
+      "Sharad Navratri"
+    ],
     "officialWebsite": "https://maajwalpadevi.org/",
     "districtInfo": "https://pauri.nic.in/tourist-place/jwalpa-devi-temple/",
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Maa+Jwalpa+Devi+Temple%2C+Patisain",
@@ -25,7 +28,10 @@
     "descriptionHi": "पौड़ी गढ़वाल की सुरम्य दीबा पर्वत चोटी पर स्थित पूजनीय मंदिर। आस-पास के ग्रामीणों द्वारा कुलदेवी के रूप में पूजित जहां से पर्वतों का विहंगम दृश्य दिखाई देता है।",
     "roadDistance": "Approximately 25 km",
     "walkingInfo": "Moderate mountain footpath from the nearest road head.",
-    "festivals": ["Navratri", "Local Annual Observance"],
+    "festivals": [
+      "Navratri",
+      "Local Annual Observance"
+    ],
     "officialWebsite": null,
     "districtInfo": null,
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Deeba+Devi+Temple%2C+Pauri+Garhwal",
@@ -41,7 +47,9 @@
     "descriptionHi": "आदि शंकराचार्य काल का 8वीं सदी का ऐतिहासिक प्रस्तर मंदिर। चीड़ के वनों के बीच स्थित जहां से अलकनंदा घाटी और हिमालयी श्रृंखलाओं का मनोरम दृश्य दिखता है।",
     "roadDistance": "50 km",
     "walkingInfo": "Short paved stone stairway leading from the road head.",
-    "festivals": ["Maha Shivratri"],
+    "festivals": [
+      "Maha Shivratri"
+    ],
     "officialWebsite": null,
     "districtInfo": null,
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Kyunkaleshwar+Mahadev+Temple%2C+Pauri",
@@ -55,9 +63,12 @@
     "category": "Sacred Ridge Shrine",
     "descriptionEn": "A revered regional shrine in Pauri Garhwal, associated with the annual Bunkhal Kalinka Mela and the spiritual traditions of surrounding villages.",
     "descriptionHi": "पौड़ी गढ़वाल की एक ऊंची पर्वत चोटी पर स्थित अत्यंत पूजनीय शक्ति पीठ, जो ऐतिहासिक बुंखाल कालिंका मेले और स्थानीय आध्यात्मिक परंपराओं से जुड़ा है।",
-    "roadDistance": "50 Km",
+    "roadDistance": "50 Km (Provisional)",
     "walkingInfo": "Ridge ascent from road head (to be confirmed with local community).",
-    "festivals": ["Bunkhal Mela (December)", "Navratri (subject to confirmation)"],
+    "festivals": [
+      "Bunkhal Mela (December)",
+      "Navratri (subject to confirmation)"
+    ],
     "officialWebsite": null,
     "districtInfo": null,
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Bunkhal+Kalinka+Devi+Temple%2C+Pauri+Garhwal",
@@ -73,7 +84,9 @@
     "descriptionHi": "पौड़ी गढ़वाल के चरीसेढ़ क्षेत्र में स्थित उच्च हिमालयी पवित्र सरोवर एवं शिव मंदिर, जो प्राकृतिक पर्वत परिदृश्यों से घिरा हुआ है।",
     "roadDistance": "56 km",
     "walkingInfo": "Approximately 5 km from Padani has been reported. Verify the actual route before journey.",
-    "festivals": ["Teej (documented in regional tourism records)"],
+    "festivals": [
+      "Teej (documented in regional tourism records)"
+    ],
     "officialWebsite": null,
     "districtInfo": null,
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Tara+Kund%2C+Kamargarh%2C+Pauri+Garhwal",
@@ -89,7 +102,9 @@
     "descriptionHi": "लसेरा पर्वत की चोटी पर स्थित नागराजा भगवान (श्रीकृष्ण) का पावन धाम। श्रद्धालु पारंपरिक रूप से गुड़ का भोग अर्पित करते हैं।",
     "roadDistance": "75 km",
     "walkingInfo": "Footpath ascent along the Lasera ridge (walking distance to be verified).",
-    "festivals": ["Annual Mela on 13–14 April (recorded by Pauri administration)"],
+    "festivals": [
+      "Annual Mela on 13–14 April (recorded by Pauri administration)"
+    ],
     "officialWebsite": null,
     "districtInfo": null,
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Danda+Nagraja+Temple%2C+Silsu",
@@ -105,7 +120,10 @@
     "descriptionHi": "पौड़ी गढ़वाल के सघन वनों में लगभग 2,480 मीटर की ऊंचाई पर स्थित प्राचीन शिव मंदिर। शांति, प्राकृतिक सौंदर्य और आध्यात्मिक ऊर्जा का केंद्र।",
     "roadDistance": "106 km",
     "walkingInfo": "The Pauri district source identifies a 22 km bridle path from the last motorable access at Thalisain. This is a substantial trek; verify the endpoint and access route before treating as final.",
-    "festivals": ["Baikunth Chaturdashi", "Maha Shivratri"],
+    "festivals": [
+      "Baikunth Chaturdashi",
+      "Maha Shivratri"
+    ],
     "officialWebsite": null,
     "districtInfo": null,
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Binsar+Mahadev+Temple%2C+Thalisain%2C+Pauri+Garhwal",
@@ -121,7 +139,9 @@
     "descriptionHi": "मध्यकालीन गढ़वाल की 52 गढ़ियों में से एक ऐतिहासिक दुर्ग स्थल। अपनी सामरिक ऊंचाई, प्राचीन अवशेषों और पर्वतीय दृश्यों के लिए प्रसिद्ध।",
     "roadDistance": "125 km",
     "walkingInfo": "Approximately 4 km trek from Kingorikhal has been reported. Note that the route link points to the Kingorikhal trek starting point rather than the summit.",
-    "festivals": ["Local annual observance (requires verification)"],
+    "festivals": [
+      "Local annual observance (requires verification)"
+    ],
     "officialWebsite": null,
     "districtInfo": null,
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Kingorikhal%2C+Pauri+Garhwal",
@@ -137,7 +157,10 @@
     "descriptionHi": "बियासी वल्ली, नैनीडांडा क्षेत्र की पहाड़ी चोटी पर स्थित पवित्र मंदिर, जिसे आस-पास के पर्वतीय गांवों की कुलरक्षिका देवी माना जाता है।",
     "roadDistance": "142 km",
     "walkingInfo": "Approximately 3 km uphill walk has been reported by Uttarakhand Rural Development. Verify exact access point before journey.",
-    "festivals": ["Chaitra Navratri", "Ashwin Navratri (subject to temple confirmation)"],
+    "festivals": [
+      "Chaitra Navratri",
+      "Ashwin Navratri (subject to temple confirmation)"
+    ],
     "officialWebsite": null,
     "districtInfo": null,
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Maa+Bungi+Devi+Temple%2C+Biyasi+Valli",

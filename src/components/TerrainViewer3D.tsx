@@ -22,6 +22,7 @@ export const TerrainViewer3D: React.FC<TerrainViewer3DProps> = ({
   const [mistEnabled, setMistEnabled] = useState(true);
   const [trailVisible, setTrailVisible] = useState(true);
   const [selectedMarker, setSelectedMarker] = useState<'bidaliya' | 'village' | null>(null);
+  const [isTouchActive, setIsTouchActive] = useState(false);
 
   const controlsRef = useRef<OrbitControls | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
@@ -64,6 +65,12 @@ export const TerrainViewer3D: React.FC<TerrainViewer3DProps> = ({
     controls.minDistance = 14;
     controls.maxDistance = 140;
     controls.target.set(0, 8, 0);
+    // Smooth mobile scrolling: two fingers to rotate by default so single finger scrolls the page
+    controls.touches = {
+      ONE: -1 as unknown as THREE.TOUCH,
+      TWO: THREE.TOUCH.ROTATE,
+    };
+    renderer.domElement.style.touchAction = 'pan-y';
     controlsRef.current = controls;
 
     // LIGHTING (Himalayan Morning Atmosphere)
@@ -363,6 +370,23 @@ export const TerrainViewer3D: React.FC<TerrainViewer3DProps> = ({
     };
   }, [isDedicatedPage]);
 
+  // Sync touch controls for seamless mobile page scrolling
+  useEffect(() => {
+    if (controlsRef.current) {
+      if (isTouchActive) {
+        controlsRef.current.touches = {
+          ONE: THREE.TOUCH.ROTATE,
+          TWO: THREE.TOUCH.DOLLY_PAN,
+        };
+      } else {
+        controlsRef.current.touches = {
+          ONE: -1 as unknown as THREE.TOUCH,
+          TWO: THREE.TOUCH.ROTATE,
+        };
+      }
+    }
+  }, [isTouchActive]);
+
   // CAMERA PRESETS
   const focusOn = (mode: 'overview' | 'bidaliya' | 'village') => {
     if (!controlsRef.current || !cameraRef.current) return;
@@ -412,17 +436,17 @@ export const TerrainViewer3D: React.FC<TerrainViewer3DProps> = ({
       />
 
       {/* Top Overlay: Prototype Notice & Badge */}
-      <div className="absolute top-4 left-4 right-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pointer-events-none z-10">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-deepGreen-dark/90 backdrop-blur-md border border-mist/20 text-xs font-mono text-mist shadow-lg pointer-events-auto">
-          <Compass className="w-4 h-4 text-earth-light animate-spin-slow" />
+      <div className="absolute top-2 sm:top-4 left-2 sm:left-4 right-2 sm:right-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1.5 sm:gap-2 pointer-events-none z-10">
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg bg-deepGreen-dark/90 backdrop-blur-md border border-mist/20 text-[11px] sm:text-xs font-mono text-mist shadow-lg pointer-events-auto">
+          <Compass className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-earth-light animate-spin-slow shrink-0" />
           <span className="font-semibold text-ivory">Garhwal Hillside Topography</span>
-          <span className="text-earth">•</span>
-          <span className="text-mist/80">Interactive 3D</span>
+          <span className="text-earth hidden xs:inline">•</span>
+          <span className="text-mist/80 hidden xs:inline">Interactive 3D</span>
         </div>
 
         {/* Clear Conceptual Terrain Prototype Label */}
-        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-earth-dark/90 backdrop-blur-md border border-earth/40 text-[11px] text-ivory/95 font-sans pointer-events-auto shadow-md">
-          <AlertCircle className="w-3.5 h-3.5 text-earth-light shrink-0" />
+        <div className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-earth-dark/90 backdrop-blur-md border border-earth/40 text-[10px] sm:text-[11px] text-ivory/95 font-sans pointer-events-auto shadow-md">
+          <AlertCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-earth-light shrink-0" />
           <span>{t.terrain.disclaimer}</span>
         </div>
       </div>
@@ -505,11 +529,30 @@ export const TerrainViewer3D: React.FC<TerrainViewer3DProps> = ({
       </div>
 
       {/* Floating View Controls */}
-      <div className="absolute bottom-4 right-4 z-10 flex flex-wrap sm:flex-col items-end gap-2 pointer-events-auto">
-        <div className="flex items-center gap-1.5 bg-deepGreen-dark/95 backdrop-blur-md p-1.5 rounded-xl border border-mist/20 shadow-xl">
+      <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-10 flex flex-wrap sm:flex-col items-end gap-1.5 sm:gap-2 pointer-events-auto">
+        {/* Mobile 3D Touch Rotation Toggle */}
+        <div className="sm:hidden flex items-center bg-deepGreen-dark/95 backdrop-blur-md p-1 rounded-xl border border-mist/20 shadow-xl">
+          <button
+            onClick={() => setIsTouchActive((prev) => !prev)}
+            className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors flex items-center gap-1.5 ${
+              isTouchActive
+                ? 'bg-earth text-ivory font-bold shadow-md'
+                : 'text-mist/90 hover:text-ivory'
+            }`}
+          >
+            <RotateCw className="w-3 h-3" />
+            <span>
+              {isTouchActive
+                ? (language === 'hi' ? 'स्क्रॉल पर लौटें' : 'Done')
+                : (language === 'hi' ? '3D घुमाएं' : 'Rotate 3D')}
+            </span>
+          </button>
+        </div>
+
+        <div className="flex items-center gap-1 sm:gap-1.5 bg-deepGreen-dark/95 backdrop-blur-md p-1 sm:p-1.5 rounded-xl border border-mist/20 shadow-xl">
           <button
             onClick={() => focusOn('overview')}
-            className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors ${
+            className={`px-2.5 sm:px-3 py-1.5 text-xs rounded-lg font-medium transition-colors ${
               activeFocus === 'overview' ? 'bg-earth text-ivory font-bold' : 'text-mist/80 hover:text-ivory'
             }`}
             title="Reset overview view"
@@ -522,7 +565,7 @@ export const TerrainViewer3D: React.FC<TerrainViewer3DProps> = ({
 
           <button
             onClick={() => focusOn('bidaliya')}
-            className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors ${
+            className={`px-2.5 sm:px-3 py-1.5 text-xs rounded-lg font-medium transition-colors ${
               activeFocus === 'bidaliya' ? 'bg-earth text-ivory font-bold' : 'text-mist/80 hover:text-ivory'
             }`}
           >
@@ -531,7 +574,7 @@ export const TerrainViewer3D: React.FC<TerrainViewer3DProps> = ({
 
           <button
             onClick={() => focusOn('village')}
-            className={`px-3 py-1.5 text-xs rounded-lg font-medium transition-colors ${
+            className={`px-2.5 sm:px-3 py-1.5 text-xs rounded-lg font-medium transition-colors ${
               activeFocus === 'village' ? 'bg-earth text-ivory font-bold' : 'text-mist/80 hover:text-ivory'
             }`}
           >
@@ -539,7 +582,7 @@ export const TerrainViewer3D: React.FC<TerrainViewer3DProps> = ({
           </button>
         </div>
 
-        <div className="flex items-center gap-1.5 bg-deepGreen-dark/95 backdrop-blur-md p-1.5 rounded-xl border border-mist/20 shadow-xl">
+        <div className="flex items-center gap-1 sm:gap-1.5 bg-deepGreen-dark/95 backdrop-blur-md p-1 sm:p-1.5 rounded-xl border border-mist/20 shadow-xl">
           <button
             onClick={toggleMist}
             className={`px-2.5 py-1 text-xs rounded-lg border transition-colors ${
@@ -572,9 +615,14 @@ export const TerrainViewer3D: React.FC<TerrainViewer3DProps> = ({
       </div>
 
       {/* Mouse / Touch interaction hint */}
-      <div className="absolute bottom-16 sm:bottom-4 left-1/2 -translate-x-1/2 z-10 pointer-events-none hidden lg:block">
-        <span className="text-[11px] font-mono text-mist/70 bg-deepGreen-dark/80 px-3.5 py-1 rounded-full border border-mist/15 backdrop-blur-sm">
+      <div className="absolute bottom-16 sm:bottom-4 left-1/2 -translate-x-1/2 z-10 pointer-events-none text-center w-full px-4">
+        <span className="hidden sm:inline-block text-[11px] font-mono text-mist/70 bg-deepGreen-dark/80 px-3.5 py-1 rounded-full border border-mist/15 backdrop-blur-sm">
           Left Click + Drag: Rotate • Scroll: Zoom • Right Click: Pan
+        </span>
+        <span className="sm:hidden inline-block text-[10px] font-mono text-mist/85 bg-deepGreen-dark/90 px-3 py-1 rounded-full border border-mist/20 backdrop-blur-sm">
+          {isTouchActive
+            ? (language === 'hi' ? '1 उंगली से 3D घुमाएं • बाहर टैप करके स्क्रॉल करें' : '1 Finger: Rotate 3D • Tap Done to scroll page')
+            : (language === 'hi' ? '2 उंगलियों से 3D घुमाएं या \'3D घुमाएं\' दबाएं' : '2 Fingers: Rotate 3D • Tap \'Rotate 3D\' to interact')}
         </span>
       </div>
     </div>

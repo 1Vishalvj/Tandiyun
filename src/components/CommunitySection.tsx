@@ -208,7 +208,7 @@ export const CommunitySection: React.FC = () => {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder={t.community.form.namePlaceholder}
-                      className="w-full px-4 py-2.5 rounded-xl bg-forest-dark border border-mist/20 text-ivory placeholder-mist/40 text-sm focus:outline-none focus:border-earth transition-colors"
+                      className="w-full px-4 py-3 sm:py-2.5 rounded-xl bg-forest-dark border border-mist/20 text-ivory placeholder-mist/40 text-base sm:text-sm focus:outline-none focus:border-earth transition-colors"
                     />
                   </div>
 
@@ -221,7 +221,7 @@ export const CommunitySection: React.FC = () => {
                       value={relation}
                       onChange={(e) => setRelation(e.target.value)}
                       placeholder={t.community.form.relationPlaceholder}
-                      className="w-full px-4 py-2.5 rounded-xl bg-forest-dark border border-mist/20 text-ivory placeholder-mist/40 text-sm focus:outline-none focus:border-earth transition-colors"
+                      className="w-full px-4 py-3 sm:py-2.5 rounded-xl bg-forest-dark border border-mist/20 text-ivory placeholder-mist/40 text-base sm:text-sm focus:outline-none focus:border-earth transition-colors"
                     />
                   </div>
                 </div>
@@ -235,7 +235,7 @@ export const CommunitySection: React.FC = () => {
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder={t.community.form.titlePlaceholder}
-                    className="w-full px-4 py-2.5 rounded-xl bg-forest-dark border border-mist/20 text-ivory placeholder-mist/40 text-sm focus:outline-none focus:border-earth transition-colors"
+                    className="w-full px-4 py-3 sm:py-2.5 rounded-xl bg-forest-dark border border-mist/20 text-ivory placeholder-mist/40 text-base sm:text-sm focus:outline-none focus:border-earth transition-colors"
                   />
                 </div>
 
@@ -249,7 +249,7 @@ export const CommunitySection: React.FC = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder={t.community.form.messagePlaceholder}
-                    className="w-full px-4 py-2.5 rounded-xl bg-forest-dark border border-mist/20 text-ivory placeholder-mist/40 text-sm focus:outline-none focus:border-earth transition-colors resize-none"
+                    className="w-full px-4 py-3 sm:py-2.5 rounded-xl bg-forest-dark border border-mist/20 text-ivory placeholder-mist/40 text-base sm:text-sm focus:outline-none focus:border-earth transition-colors resize-none"
                   />
                 </div>
 

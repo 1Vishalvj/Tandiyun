@@ -25,10 +25,13 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# working raw photos directory
+Tandyu_Cleaned_Photos*/
+*.zip
+
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
