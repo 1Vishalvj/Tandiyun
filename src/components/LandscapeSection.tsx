@@ -154,3 +154,4 @@ export const LandscapeSection: React.FC<LandscapeSectionProps> = ({ onSelectPhot
     </section>
   );
 };
+

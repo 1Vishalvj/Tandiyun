@@ -309,3 +309,4 @@ export const CommunitySection: React.FC = () => {
     </section>
   );
 };
+

@@ -67,3 +67,4 @@ export const ExploreSection: React.FC = () => {
     </section>
   );
 };
+

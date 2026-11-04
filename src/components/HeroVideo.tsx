@@ -153,3 +153,4 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ isMuted, setIsMuted }) => 
     </section>
   );
 };
+

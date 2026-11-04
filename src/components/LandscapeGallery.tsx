@@ -168,3 +168,4 @@ export const LandscapeGallery: React.FC<LandscapeGalleryProps> = ({
     </section>
   );
 };
+

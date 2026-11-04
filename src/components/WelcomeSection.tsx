@@ -114,3 +114,4 @@ export const WelcomeSection: React.FC = () => {
     </section>
   );
 };
+

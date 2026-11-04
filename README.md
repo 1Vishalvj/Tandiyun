@@ -122,3 +122,4 @@ public/
 
 All original landscape photographs and video recordings are property of the Tandiyun village community.  
 *"Wherever we go, our roots remain in Tandiyun."*
+
