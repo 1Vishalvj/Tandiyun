@@ -16,7 +16,7 @@
     "officialWebsite": "https://maajwalpadevi.org/",
     "districtInfo": "https://pauri.nic.in/tourist-place/jwalpa-devi-temple/",
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Maa+Jwalpa+Devi+Temple%2C+Patisain",
-    "image": "/assets/photos/gallery/IMG_20200814_063519.webp"
+    "image": "/assets/photos/temples/jwalpa-devi/jwalpa-devi.webp"
   },
   {
     "id": "deeba-devi",
@@ -35,7 +35,7 @@
     "officialWebsite": null,
     "districtInfo": null,
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Deeba+Devi+Temple%2C+Pauri+Garhwal",
-    "image": "/assets/photos/gallery/IMG_20200814_062035.webp"
+    "image": "/assets/photos/temples/deeba-mata/deeba-mata.webp"
   },
   {
     "id": "kyunkaleshwar-mahadev",
@@ -72,7 +72,7 @@
     "officialWebsite": null,
     "districtInfo": null,
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Bunkhal+Kalinka+Devi+Temple%2C+Pauri+Garhwal",
-    "image": "/assets/photos/gallery/IMG_20200707_090849.webp"
+    "image": "/assets/photos/temples/bunkhal-kalinka/bunkhal-kalinka.webp"
   },
   {
     "id": "tarakund-mahadev",

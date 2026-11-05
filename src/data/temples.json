@@ -29,8 +29,9 @@
     "districtInfo": "https://pauri.nic.in/tourist-place/jwalpa-devi-temple/",
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Jwalpa_Devi",
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Maa+Jwalpa+Devi+Temple%2C+Patisain",
-    "image": null,
-    "hasAuthenticPhoto": false
+    "image": "/assets/photos/temples/jwalpa-devi/jwalpa-devi.webp",
+    "hasAuthenticPhoto": true,
+    "photoCredit": "Authentic Village Archive Contributor (Maa Jwalpa Devi Temple)"
   },
   {
     "id": "bunkhal-kalinka",
@@ -94,8 +95,9 @@
     "districtInfo": null,
     "wikipediaUrl": "https://en.wikipedia.org/wiki/Deeba_Danda",
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Deeba+Devi+Temple%2C+Pauri+Garhwal",
-    "image": null,
-    "hasAuthenticPhoto": false
+    "image": "/assets/photos/temples/deeba-mata/deeba-mata.webp",
+    "hasAuthenticPhoto": true,
+    "photoCredit": "Authentic Village Archive Contributor (Deeba Temple / Deeba Danda)"
   },
   {
     "id": "dhari-devi",
@@ -127,8 +129,8 @@
     "districtInfo": "https://pauri.nic.in/around-srinagar/",
     "wikipediaUrl": "https://hi.wikipedia.org/wiki/%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A5%80_%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A5%80",
     "googleMapsUrl": "https://www.google.com/maps/dir/?api=1&origin=30.0026375%2C78.8332031&destination=Dhari+Devi+Temple%2C+Kalyasaur",
-    "image": null,
-    "hasAuthenticPhoto": false
+    "image": "/assets/photos/temples/dhari-devi/dhari-devi.webp",
+    "hasAuthenticPhoto": true,
+    "photoCredit": "Authentic Village Archive Contributor (Dhari Devi Temple, Kalyasaur)"
   }
 ]
-
